@@ -1,12 +1,8 @@
 == Modelltransformationen
 === Transformation ins minimale Geodatenmodell des Bundes
 * Quellmodell: Das hier beschriebene Datenmodell
-* Zielmodell: http://models.geo.admin.ch/BAFU/todo[<Modellname>] (Version: 2023-03-20)
+* Zielmodell: http://models.geo.admin.ch/BAFU/Rodungen_V1_1.ili[Rodungen_V1_1] (Version: 2024-05-06)
 
-
-=== Transformation ins Transfermodell ÖREB-Kataster
-* Quellmodell: Das hier beschriebene Datenmodell
-* Zielmodell: https://models.geo.admin.ch/V_D/OeREB/OeREBKRMtrsfr_V2_0.ili[OeREBKRMtrsfr_V2_0] (Version: 2021-04-14)
 
 ==== Klasse `+DarstellungsDienst+`
 [cols=2*,options="header"]
@@ -65,16 +61,6 @@ m| https://data.geo.sz.ch/public/Themen/A057b/[Legende.xml] m| ArtCodeliste
 | fix: " `+ch.StatischeWaldgrenzen+` " m| Thema
 | - - - m| SubThema
 |===
-
-
-[cols="e,m,^,>s",width="25%"]
-|===
-|1 >s|2 |3 |4
-^|5 2.2+^.^|6 .3+<.>m|7
-^|8
-|9 2+>|10
-|===
-
 
 ifdef::backend-pdf[]
 <<<
