@@ -1,6 +1,6 @@
 // Hier den Titel eingeben
-:title: Modelldokumentation 
-:subtitle: <Untertitel der Dokumentation> (<Themen-Nummer>)
+:title: Rodungen und Rodungsersatz (A188)
+:subtitle: Modelldokumentation
 ifdef::backend-pdf[]
 = {title}
 {subtitle}
