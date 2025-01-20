@@ -10,10 +10,10 @@
 |letzte Änderung | {docdate}
 | Themen-Nummer | A188
 | ID nach kGeoiV | 185.1 
-| Beteiligte | Person 1 (Kep), AGI + 
-Person 2 (ChA), AWN
-| Status a| - [ ] Entwurf 
-- [x] bereit für Vernehmlassung
+| Beteiligte | Kuno Epper (Kep), AGI + 
+Christoph Angst (ChA), AWN
+| Status a| - [x] Entwurf 
+- [ ] bereit für Vernehmlassung
 - [ ] gültig
 |=======
 ====
