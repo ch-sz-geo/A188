@@ -1,8 +1,10 @@
 == Klassenbeschreibung
 === Topic `+Stammdaten+`
-Das Topic `+Stammdaten+` umfasst alle statischen Werte. Darunter fallen z.B. die Aufzählwerte von Listen (INTERLIS-Datentyp «Aufzählung»). Jede Liste wird in einer eigenen Klasse modelliert. +
+Das Topic `+Stammdaten+` umfasst alle statischen Werte. Darunter fallen z.B. die Aufzählwerte von Listen (INTERLIS-Datentyp «Aufzählung»). Jede Liste wird in einer eigenen Klasse modelliert.
 
-Die Stammdaten werden durch die zuständige Stelle vorgegeben und bei Bedarf durch die Abteilung Geoinformation nachgeführt und . Die Stammdaten werden durch die Abteilung Geoinformation im Internet veröffentlicht.
+Die Stammdaten werden durch die zuständige Stelle vorgegeben. Bei Bundesthemen ist dies das für die Modellierung zuständige Bundesamt. Bei kantonalen Themen das zuständige kantonale Amt. Die Stammdaten von Bundesthemen können auf der Stufe Kanton erweiert werden. Die kantonalen Erweiterungen werden bei der Überführung ins Bundesmodell den entsprechenden Bundestypen zugeordnet.
+
+Die Stammdaten werden durch die Abteilung Geoinformation nachgeführt und im Internet veröffentlicht.
 
 ==== Klasse `+Katalogeintrag+`
 Die Klasse `+Katalogeintrag+` enthält die allgemeinen, für alle Kataloge gemeinsamen Attribute. Die Klasse selber ist abstrakt: Es gibt keine Objekte +Katalogeintrag+, sondern nur Objekte von den spezialisierten Klassen.
@@ -31,6 +33,121 @@ m| Bemerkung
 | Dieser Status wird für alle Objekte verwendet, bei denen aktuell eine Nachführung läuft.
 | öffentlich
 |===
+
+Die Katalogeinträge sind durch das Bundesamt vorgegeben und im Bundesmodell als Codes definiert. Die Sprachübersetzung erfolgt über die XML-Datei http://models.geo.admin.ch/BAFU/Rodungen_Codetexte_V1_1.xml[Rodungen_Codetexte_V1_1.xml]. Diese Daten bilden die Grundlage für die Übernahme in die kantonalen Stammdaten. Es gilt folgende Zuorndung:
+
+[cols=2*,options="header"]
+|===
+| Kanton | Bund
+m| OID | wird einmalig vergeben
+m| Code | entspricht der TID des XMLs bzw. dem Wert der Aufzählung im Modell
+m| Name | deutscher Text gemäss XML (optimiert für GUI)
+m| SortierNr | aufsteigende Zahl entsprechend der Reihenfolge im XML
+m| Bemerkung | deutscher Text gemäss XML (unverändert!)
+|===
+
+==== Klasse `+Typ+`
+Die Klasse `+Typ+` bezeichnet die Bedeutung der Rodungsgeometrie. Sie beinhaltet die Aufzählung "ObjektTyp" gemäss Bundesmodell.
+
+[cols=4*,options="header"]
+|===
+| Name | Beschreibung | Beispiel | Freigabe
+4+| _Diese Klasse führt keine zusätzlichen Attribute_
+4+| *Anforderungen*
+m|Code
+3+| Die Werte müssen eindeutig sein
+m|Name
+3+| Die Werte müssen eindeutig sein
+|===
+
+==== Klasse `+Massnahme+`
+Die Klasse `+Massnahme+` beinhaltet die Massnahmen, welche anstelle eines Realersatzes getroffen werden. Die Massnahmen werden zu Gunsten des Natur- und Landschaftsschutzes getroffen und entsprechen im Bundesmodell der Aufzählung `+MassnahmeNLTyp+`. Weil es nur Massnahmen zu Gunsten des Natur- und Landschaftsschutzes gibt, werden alle Massnahmen in die gleiche Klasse eingetragen und auf das Suffix "NL" (vgl. Bundesmodell) verzichtet.
+
+[cols=4*,options="header"]
+|===
+| Name | Beschreibung | Beispiel | Freigabe
+4+| _Diese Klasse führt keine zusätzlichen Attribute_
+4+| *Anforderungen*
+m|Code
+3+| Die Werte müssen eindeutig sein
+m|Name
+3+| Die Werte müssen eindeutig sein
+|===
+
+==== Klasse `+Ersatzmassnahmeart+`
+Die Klasse `+Ersatzmassnahmeart+` beinhaltet die Massnahmen, welche als Rodungsersatz getroffen werden. Die Ersatzmassnahmen entsprechen im Bundesmodell der Aufzählung `+ErsatzMassnahmenNL+`. Weil es nur Ersatzmassnahmen zu Gunsten des Natur- und Landschaftsschutzes gibt, werden alle Massnahmen in die gleiche Klasse eingetragen und auf das Suffix "NL" (vgl. Bundesmodell) verzichtet.
+
+[cols=4*,options="header"]
+|===
+| Name | Beschreibung | Beispiel | Freigabe
+4+| _Diese Klasse führt keine zusätzlichen Attribute_
+4+| *Anforderungen*
+m|Code
+3+| Die Werte müssen eindeutig sein
+m|Name
+3+| Die Werte müssen eindeutig sein
+|===
+
+==== Klasse `+Rodungszweck+`
+Die Klasse `+Rodungszweck+` beinhaltet die Werte zum Rodungszweck und entsprecht im Bundesmodell der Aufzählung `+RodungszweckTyp+`.
+
+[cols=4*,options="header"]
+|===
+| Name | Beschreibung | Beispiel | Freigabe
+4+| _Diese Klasse führt keine zusätzlichen Attribute_
+4+| *Anforderungen*
+m|Code
+3+| Die Werte müssen eindeutig sein
+m|Name
+3+| Die Werte müssen eindeutig sein
+|===
+
+
+
+
+
+
+
+
+
+==== Klasse `+Typ+`
+Über den Typ wird die Art der Geometrie festgelegt.
+
+In der Klasse `+Typ+` wurde anfänglich auch der Typ des Wirkbereiches aufgeführt. Weil ein Wirkbereich jedoch stets gleich symbolisiert wird, wurde entschieden, auf diesen Eintrag zu verzichtet.
+[cols=4*,options="header"]
+|===
+| Name | Beschreibung | Beispiel | Freigabe
+m| OID
+| technischer Objektidentifikator
+| ceaa37a9-8614-43fc-9a8b-688f95c30218
+| öffentlich
+m| Code
+| Code des Listeneintrages; entspricht in INTERLIS dem Wert der Aufzählung und muss ein gültiger INTERLIS-Name sein (siehe https://www.interlis.ch/dokumentation[INTERLIS-Referenzhandbuch])
+| ausserhalb_Bauzonen_statisch
+| öffentlich
+m| Name
+| Bezeichnung des Katalogeintrages, wie er den Nutzenden angezeigt wird
+| Waldgrenze ausserhalb Bauzone (statisch)
+| öffentlich
+m| Abkuerzung
+| Kurzform des Katalogeintrages
+| WGraB_s
+| öffentlich
+m| SortierNr
+| Reihenfolge des Katalogeintrages in der Auswahlliste
+| 2
+| öffentlich
+m| Bemerkung
+| Erläuterung, welche den Katalogeintrag näher beschreibt
+| Statische Waldgrenze in Gebieten ausserhalb der Bauzonen, in denen der Kanton eine Zunahme des Waldes verhindern will.
+| öffentlich
+m| Symbol
+| Bild des Legendeneintrages; codiert als Base64-Wert
+| iVBORw0KGg... (gekürzt)
+| öffentlich
+|===
+
+
 
 
 === Topic `+Fachdaten+`
