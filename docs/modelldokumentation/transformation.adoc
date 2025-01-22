@@ -4,62 +4,119 @@
 * Zielmodell: http://models.geo.admin.ch/BAFU/Rodungen_V1_1.ili[Rodungen_V1_1] (Version: 2024-05-06)
 
 
-==== Klasse `+DarstellungsDienst+`
+==== Struktur `+Objekt+`
 [cols=2*,options="header"]
 |===
 | Quellattribut | Zielattribut
-| `+ch.sz.a094b.oereb.wald.statische_waldgrenze.linie+`
-| `+VerweisWMS+`
+| `+SZ_Rodungen_V1.Fachdaten.Punkt.Geometrie+` m| Punkt
+| `+SZ_Rodungen_V1.Fachdaten.Flaeche.Geometrie+` m| Polygon
+| `+SZ_Rodungen_V1.Fachdaten.Geometrie.rTyp+` m| Objekt_Typ
+| todo m| MassnahmenNL_Typ
+| todo m| MassnahmenNL_Beschreibung
 |===
 
-==== Klasse `+Eigentumsbeschraenkung+`
+==== Klasse `+Rodungsbewilligung+`
 [cols=2*,options="header"]
 |===
 | Quellattribut | Zielattribut
-| Der Wert für `+Rechtsstatus+` wird regelbasiert abgeleitet (siehe unten) | `+Rechtsstatus+`
-| Datum, an dem die Publikation im ÖREB-Katastersystem erfolgt; wird durch den Publikationsprozess gesetzt m| publiziertAb
-| (aktuell nicht verwendet und daher leer) m| publiziertBis
+| `+SZ_Verfahren_Waldrecht_V1.Fachdaten.Rodung.Kennung+` m| Nr_Kanton
+| `+SZ_Verfahren_Waldrecht_V1.Fachdaten.Rodung.Kennung_Bund+` m| Nr_Bund
+| `+SZ_Verfahren_Waldrecht_V1.Fachdaten.Rodung.Name+`m| Vorhaben
+| todo m| Ersatz_Real
+| todo m| Ersatz_MassnahmenNL
+| todo m| Ersatz_Verzicht
+| todo m| Zustaendigkeit
+| `+SZ_Rodungen_V1.Fachdaten.Rodung.Rodungsflaeche_def+` m| Flaeche_Rodung_def
+| `+SZ_Rodungen_V1.Fachdaten.Rodung.Rodungsflaeche_temp+` m| Flaeche_Rodung_temp
+| `+SZ_Rodungen_V1.Fachdaten.Rodung.Rodungsflaeche_histo+` m| Flaeche_Fruehere_Rodung15Jahre
+| `+SZ_Rodungen_V1.Fachdaten.Rodung.Realersatzflaeche+` m| Flaeche_Ersatz_Real
+| `+SZ_Rodungen_V1.Fachdaten.Rodung.Verzichtsflaeche+` m| Flaeche_Ersatz_Verzicht
+| `+SZ_Rodungen_V1.Fachdaten.Rodung.Massnahmeflaeche_total+` m| Flaeche_Ersatz_MassnahmenNL
+| über Stammdaten lösen m| MassnahmenNL_Typ
+| `+SZ_Rodungen_V1.Fachdaten.Rodung.Massnahmenbeschreibung+` + 
+Achtung: MTEXT; Zeilenumbrüche sind mit einem Leerschlag zu ersetzen m| MassnahmenNL_Beschreibung
+| `+SZ_Rodungen_V1.Fachdaten.Rodung.Massnahmeflaeche_Wald+` m| FlaecheMassnahmeNL_ImWaldareal
+| `+SZ_Rodungen_V1.Fachdaten.Rodung.Massnahmeflaeche_Nichtwald+` m| FlaecheMassnahmeNL_AusserhalbWaldareal
+| `+SZ_Rodungen_V1.Fachdaten.Rodung.hat_Massnahmenpool+` m| MassnahmeNL_Pool
+| `+SZ_Rodungen_V1.Fachdaten.Rodung.Massnahmenbemerkung+` + 
+Achtung: MTEXT; Zeilenumbrüche sind mit einem Leerschlag zu ersetzen m| Massnahme_WeitereBemerkungen
+| `+SZ_Rodungen_V1.Fachdaten.Rodung.rRodungszweck+` m| Rodungszweck
+| `+SZ_Rodungen_V1.Fachdaten.Rodung.Rodungszweckbemerkung+` + 
+Achtung: MTEXT; Zeilenumbrüche sind mit einem Leerschlag zu ersetzen m| Rodungszweck_Bemerkungen
+| `+SZ_Rodungen_V1.Fachdaten.Rodung.Rodungsfrist+` m| Frist_Rodung
+| `+SZ_Rodungen_V1.Fachdaten.Rodung.Rodungsfristbemerkung+` + 
+Achtung: MTEXT; Zeilenumbrüche sind mit einem Leerschlag zu ersetzen m| Frist_Rodung_Bemerkung
+| `+SZ_Rodungen_V1.Fachdaten.Rodung.Ersatzfrist+` m| Frist_Ersatz
+| `+SZ_Rodungen_V1.Fachdaten.Rodung.Ersatzfristbemerkung+` + 
+Achtung: MTEXT; Zeilenumbrüche sind mit einem Leerschlag zu ersetzen m| Frist_Ersatz_Bemerkung
+| `+SZ_Rodungen_V1.Fachdaten.Rodung.hat_Ausgleich+` m| Ausgleich
+| todo +
+Soll über den Verfahrensstatus realisiert werden m| Stand_Abgeschlossen
+| `+SZ_Verfahren_Waldrecht_V1.Fachdaten.Rodung.Abschlussdatum+` +
+todo: Abhängigkeit zu `+Stand_Abgeschlossen+` beachten m| Datum_Abgeschlossen
+| `+SZ_Verfahren_Waldrecht_V1.Fachdaten.Verfahren.Verfuegungsdatum+` m| Verfuegung_Datum
+| `+SZ_Verfahren_Waldrecht_V1.Fachdaten.Verfahren.Verfuegungslink+` m| Verfuegung_URL
+| `+SZ_Verfahren_Waldrecht_V1.Fachdaten.Rodung.Referenz+` +
+Achtung: MTEXT; Zeilenumbrüche sind mit einem Leerschlag zu ersetzen m| Weitere_Referenzen
+| - - - +
+Verzicht, da alle Rodungen geometrisch erfasst werden. m| Schwerpunkt
+| todo m| Objekte
 |===
 
-Regeln für die Ableitung des Wertes für `+Rechtsstatus+`:
-|===
-h| Regel h| Rechtsstatus
-a| Der Wert von `+Waldgrenze.Begruendungsverfahren+` muss gesetzt sein und der Wert von `+Waldgrenze.Aufhebungsverfahren+` muss leer sein. +
-Zudem darf der Code des Waldfeststellungstatus `+Verfahrensstatus.Code+` (hergeleitet über `+Waldfeststellung.rVerfahrensstatus+`) nicht einer der folgenden Werte aufweisen: 'abgeschlossen', 'abgeschlossen_ohne_Verfuegung', 'unbekannt'.
-| `+laufendeAenderung_Begruendung+`
-| Der Wert von `+Waldgrenze.Begruendungsverfahren+` muss gesetzt sein und der Wert von `+Waldgrenze.Aufhebungsverfahren+` muss leer sein. +
-Zudem muss der Code des Waldfeststellungstatus `+Verfahrensstatus.Code+` (hergeleitet über `+Waldfeststellung.rVerfahrensstatus+`) den Wert 'abgeschlossen' aufweisen. | `+inKraft+`
-| Die Werte von `+Waldgrenze.Begruendungsverfahren+` und `+Waldgrenze.Aufhebungsverfahren+` müssen gesetzt sein. +
-Zudem darf der Code des Waldfeststellungstatus `+Verfahrensstatus.Code+` des Aufhebungsverfahrens (hergeleitet über `+Waldfeststellung.rVerfahrensstatus+`) nicht einer der folgenden Werte aufweisen: 'abgeschlossen', 'abgeschlossen_ohne_Verfuegung', 'unbekannt'.
-| `+laufendeAenderung_Aufhebung+`
-| Die Werte von `+Waldgrenze.Begruendungsverfahren+` und `+Waldgrenze.Aufhebungsverfahren+` müssen gesetzt sein. +
-Zudem muss der Code des Waldfeststellungstatus `+Verfahrensstatus.Code+` des Aufhebungsverfahrens (hergeleitet über `+Waldfeststellung.rVerfahrensstatus+`) den Wert 'abgeschlossen' aufweisen.
-| `+inKraft_Aufhebung+`
-|===
-
-==== Klasse `+Geometrie+`
+==== Klasse `+ErsatzMassnahmenNLBeschreibung+`
 [cols=2*,options="header"]
 |===
 | Quellattribut | Zielattribut
-| - - - m| Punkt
-m| Waldgrenze.Geometrie m| Linie
-| - - - m| Flaeche
-| analog `+Eigentumsbeschraenkung.Rechtsstatus+` m| Rechtsstatus
-| analog `+Eigentumsbeschraenkung.publiziertAb+` m| publiziertAb
-| analog `+Eigentumsbeschraenkung.publiziertBis+` m| publiziertBis
-| https://www.geocat.ch/geonetwork/srv/ger/catalog.search#/metadata/8646c41b-543e-401f-836d-4b6beca7370d[Link auf GeoCat] m| MetadatenGeobasisdaten
+| todo m| Typ
+| todo m| Beschreibung
 |===
 
-==== Klasse `+LegendeEintrag+`
+==== Klasse `+ErsatzVerzichtBeschreibung+`
 [cols=2*,options="header"]
 |===
 | Quellattribut | Zielattribut
-m| Typ.Symbol m| Symbol
-m| Typ.Name m| LegendeText
-m| Typ.Code m| ArtCode
-m| https://data.geo.sz.ch/public/Themen/A057b/[Legende.xml] m| ArtCodeliste
-| fix: " `+ch.StatischeWaldgrenzen+` " m| Thema
-| - - - m| SubThema
+| todo m| Typ
+| todo m| Beschreibung
+|===
+
+==== Klasse `+MassnahmeNLTypBeschreibung+`
+[cols=2*,options="header"]
+|===
+| Quellattribut | Zielattribut
+| todo m| Typ
+| todo m| Beschreibung
+|===
+
+==== Klasse `+RodungszweckTypBeschreibung+`
+[cols=2*,options="header"]
+|===
+| Quellattribut | Zielattribut
+| todo m| Typ
+| todo m| Beschreibung
+|===
+
+==== Klasse `+ZustaendigkeitsTypBeschreibung+`
+[cols=2*,options="header"]
+|===
+| Quellattribut | Zielattribut
+| todo m| Typ
+| todo m| Beschreibung
+|===
+
+==== Klasse `+StandTypBeschreibung+`
+[cols=2*,options="header"]
+|===
+| Quellattribut | Zielattribut
+| todo m| Typ
+| todo m| Beschreibung
+|===
+
+==== Klasse `+ObjektTypBeschreibung+`
+[cols=2*,options="header"]
+|===
+| Quellattribut | Zielattribut
+| todo m| Typ
+| todo m| Beschreibung
 |===
 
 ifdef::backend-pdf[]
