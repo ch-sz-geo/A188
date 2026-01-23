@@ -1,7 +1,7 @@
 == Modelltransformationen
 === Transformation ins minimale Geodatenmodell des Bundes
 * Quellmodell: Das hier beschriebene Datenmodell
-* Zielmodell: http://models.geo.admin.ch/BAFU/Rodungen_V1_1.ili[Rodungen_V1_1] (Version: 2024-05-06)
+* Zielmodell: http://models.geo.admin.ch/BAFU/Rodungen_V1_1.ili[Rodungen_V1_1] (Version: 2025-01-27)
 
 
 ==== Struktur `+Objekt+`
@@ -122,3 +122,4 @@ Verzicht, da alle Rodungen geometrisch erfasst werden. m| Schwerpunkt
 ifdef::backend-pdf[]
 <<<
 endif::[]
+
