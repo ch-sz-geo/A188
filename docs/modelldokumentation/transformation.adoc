@@ -10,9 +10,9 @@
 | Quellattribut | Zielattribut
 | `+SZ_Rodungen_V1.Fachdaten.Punkt.Geometrie+` m| Punkt
 | `+SZ_Rodungen_V1.Fachdaten.Flaeche.Geometrie+` m| Polygon
-| `+SZ_Rodungen_V1.Fachdaten.Geometrie.rTyp+` m| Objekt_Typ
-| todo m| MassnahmenNL_Typ
-| todo m| MassnahmenNL_Beschreibung
+| `+SZ_Rodungen_V1.Fachdaten.Geometrie.rErsatztyp+` m| Objekt_Typ
+| `+SZ_Rodungen_V1.Fachdaten.Geometrie.rErsatzmassnahmeart+` m| MassnahmenNL_Typ
+| `+SZ_Rodungen_V1.Fachdaten.Geometrie.Massnahmenbeschreibung+` m| MassnahmenNL_Beschreibung
 |===
 
 ==== Klasse `+Rodungsbewilligung+`
@@ -21,11 +21,16 @@
 | Quellattribut | Zielattribut
 | `+SZ_Verfahren_Waldrecht_V1.Fachdaten.Rodung.Kennung+` m| Nr_Kanton
 | `+SZ_Verfahren_Waldrecht_V1.Fachdaten.Rodung.Kennung_Bund+` m| Nr_Bund
-| `+SZ_Verfahren_Waldrecht_V1.Fachdaten.Rodung.Name+`m| Vorhaben
-| todo m| Ersatz_Real
-| todo m| Ersatz_MassnahmenNL
-| todo m| Ersatz_Verzicht
-| todo m| Zustaendigkeit
+| `+SZ_Verfahren_Waldrecht_V1.Fachdaten.Rodung.Name+` m| Vorhaben
+| `+SZ_Rodungen_V1.Fachdaten.Geometrie.ist_Realersatz+` +
+Regel: falls eine der zugewiesenen Geometrien TRUE aufweist, wird TRUE gesetzt; andernfalls FALSE m| Ersatz_Real
+| `+SZ_Rodungen_V1.Stammdaten.Ersatzmassnahmeart.Code+` +
+über `+SZ_Rodungen_V1.Fachdaten.Geometrie.rErsatzmassnahmeart+` +
+Regel: BAG wird gebildet über alle Ersatzmassnahmearten der zugeordneten Geometrien m| Ersatz_MassnahmenNL
+| `+SZ_Rodungen_V1.Stammdaten.Verzichtsgrund.Code+` +
+über `+SZ_Rodungen_V1.Fachdaten.Geometrie.rVerzichtsgrund+` +
+Regel: BAG wird gebildet über alle Verzichtsgründe der zugeordneten Geometrien m| Ersatz_Verzicht
+| `+SZ_Rodungen_V1.Stammdaten.Zustaendigkeit.Code+` m| Zustaendigkeit
 | `+SZ_Rodungen_V1.Fachdaten.Rodung.Rodungsflaeche_def+` m| Flaeche_Rodung_def
 | `+SZ_Rodungen_V1.Fachdaten.Rodung.Rodungsflaeche_temp+` m| Flaeche_Rodung_temp
 | `+SZ_Rodungen_V1.Fachdaten.Rodung.Rodungsflaeche_histo+` m| Flaeche_Fruehere_Rodung15Jahre
@@ -122,4 +127,5 @@ Verzicht, da alle Rodungen geometrisch erfasst werden. m| Schwerpunkt
 ifdef::backend-pdf[]
 <<<
 endif::[]
+
 
