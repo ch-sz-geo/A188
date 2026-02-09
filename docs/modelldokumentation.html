@@ -227,17 +227,23 @@ th {
 </li>
 <li><a href="#_modelltransformationen">5. Modelltransformationen</a>
 <ul class="sectlevel2">
-<li><a href="#_transformation_ins_minimale_geodatenmodell_des_bundes">5.1. Transformation ins minimale Geodatenmodell des Bundes</a>
+<li><a href="#_erstintegration">5.1. Erstintegration</a>
 <ul class="sectlevel3">
-<li><a href="#_struktur_objekt">5.1.1. Struktur <code>Objekt</code></a></li>
-<li><a href="#_klasse_rodungsbewilligung">5.1.2. Klasse <code>Rodungsbewilligung</code></a></li>
-<li><a href="#_klasse_ersatzmassnahmennlbeschreibung">5.1.3. Klasse <code>ErsatzMassnahmenNLBeschreibung</code></a></li>
-<li><a href="#_klasse_ersatzverzichtbeschreibung">5.1.4. Klasse <code>ErsatzVerzichtBeschreibung</code></a></li>
-<li><a href="#_klasse_massnahmenltypbeschreibung">5.1.5. Klasse <code>MassnahmeNLTypBeschreibung</code></a></li>
-<li><a href="#_klasse_rodungszwecktypbeschreibung">5.1.6. Klasse <code>RodungszweckTypBeschreibung</code></a></li>
-<li><a href="#_klasse_zustaendigkeitstypbeschreibung">5.1.7. Klasse <code>ZustaendigkeitsTypBeschreibung</code></a></li>
-<li><a href="#_klasse_standtypbeschreibung">5.1.8. Klasse <code>StandTypBeschreibung</code></a></li>
-<li><a href="#_klasse_objekttypbeschreibung">5.1.9. Klasse <code>ObjektTypBeschreibung</code></a></li>
+<li><a href="#_details_zu_den_daten">5.1.1. Details zu den Daten</a></li>
+<li><a href="#_details_zum_attributmapping">5.1.2. Details zum Attributmapping</a></li>
+</ul>
+</li>
+<li><a href="#_transformation_ins_minimale_geodatenmodell_des_bundes">5.2. Transformation ins minimale Geodatenmodell des Bundes</a>
+<ul class="sectlevel3">
+<li><a href="#_struktur_objekt">5.2.1. Struktur <code>Objekt</code></a></li>
+<li><a href="#_klasse_rodungsbewilligung">5.2.2. Klasse <code>Rodungsbewilligung</code></a></li>
+<li><a href="#_klasse_ersatzmassnahmennlbeschreibung">5.2.3. Klasse <code>ErsatzMassnahmenNLBeschreibung</code></a></li>
+<li><a href="#_klasse_ersatzverzichtbeschreibung">5.2.4. Klasse <code>ErsatzVerzichtBeschreibung</code></a></li>
+<li><a href="#_klasse_massnahmenltypbeschreibung">5.2.5. Klasse <code>MassnahmeNLTypBeschreibung</code></a></li>
+<li><a href="#_klasse_rodungszwecktypbeschreibung">5.2.6. Klasse <code>RodungszweckTypBeschreibung</code></a></li>
+<li><a href="#_klasse_zustaendigkeitstypbeschreibung">5.2.7. Klasse <code>ZustaendigkeitsTypBeschreibung</code></a></li>
+<li><a href="#_klasse_standtypbeschreibung">5.2.8. Klasse <code>StandTypBeschreibung</code></a></li>
+<li><a href="#_klasse_objekttypbeschreibung">5.2.9. Klasse <code>ObjektTypBeschreibung</code></a></li>
 </ul>
 </li>
 </ul>
@@ -944,7 +950,51 @@ Christoph Angst (ChA), AWN</p></td>
 <h2 id="_modelltransformationen"><a class="anchor" href="#_modelltransformationen"></a><a class="link" href="#_modelltransformationen">5. Modelltransformationen</a></h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_transformation_ins_minimale_geodatenmodell_des_bundes"><a class="anchor" href="#_transformation_ins_minimale_geodatenmodell_des_bundes"></a><a class="link" href="#_transformation_ins_minimale_geodatenmodell_des_bundes">5.1. Transformation ins minimale Geodatenmodell des Bundes</a></h3>
+<h3 id="_erstintegration"><a class="anchor" href="#_erstintegration"></a><a class="link" href="#_erstintegration">5.1. Erstintegration</a></h3>
+<div class="paragraph">
+<p>Die Erstintegration beschreibt die erstmalige Datenübernahme aus dem bisherigen produktiven System ins kantonale Geodatenmodell.
+* Quellmodell: keines; die Sachdaten liegen in einer Access-Datenbank und die Geodaten in einem Geopackage vor
+* Zielmodell: Das hier beschriebene Datenmodell</p>
+</div>
+<div class="sect3">
+<h4 id="_details_zu_den_daten"><a class="anchor" href="#_details_zu_den_daten"></a><a class="link" href="#_details_zu_den_daten">5.1.1. Details zu den Daten</a></h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Sachdaten</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>RodungenSZ_Datenbank.accdb</strong> mit Abgabedatum vom 29. Januar 2026</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Geodaten</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Nachteilige_Nutzungen_KTSZ - Kopie.gpkg</strong> mit Stand vom 11.12.2024</p>
+</li>
+<li>
+<p><strong>Rodungen&amp;Ersatz - Kopie.gpkg</strong> mit Stand vom 26.01.2026</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_details_zum_attributmapping"><a class="anchor" href="#_details_zum_attributmapping"></a><a class="link" href="#_details_zum_attributmapping">5.1.2. Details zum Attributmapping</a></h4>
+<div class="paragraph">
+<p>Die detaillierte Beschreibung der Überführung der Quellattribute zu ihren Zielattributen entnehme man dem FME-Workpsace, welches im Themenverzeichnis abgelget ist.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_transformation_ins_minimale_geodatenmodell_des_bundes"><a class="anchor" href="#_transformation_ins_minimale_geodatenmodell_des_bundes"></a><a class="link" href="#_transformation_ins_minimale_geodatenmodell_des_bundes">5.2. Transformation ins minimale Geodatenmodell des Bundes</a></h3>
 <div class="ulist">
 <ul>
 <li>
@@ -956,7 +1006,7 @@ Christoph Angst (ChA), AWN</p></td>
 </ul>
 </div>
 <div class="sect3">
-<h4 id="_struktur_objekt"><a class="anchor" href="#_struktur_objekt"></a><a class="link" href="#_struktur_objekt">5.1.1. Struktur <code>Objekt</code></a></h4>
+<h4 id="_struktur_objekt"><a class="anchor" href="#_struktur_objekt"></a><a class="link" href="#_struktur_objekt">5.2.1. Struktur <code>Objekt</code></a></h4>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 50%;">
@@ -993,7 +1043,7 @@ Christoph Angst (ChA), AWN</p></td>
 </table>
 </div>
 <div class="sect3">
-<h4 id="_klasse_rodungsbewilligung"><a class="anchor" href="#_klasse_rodungsbewilligung"></a><a class="link" href="#_klasse_rodungsbewilligung">5.1.2. Klasse <code>Rodungsbewilligung</code></a></h4>
+<h4 id="_klasse_rodungsbewilligung"><a class="anchor" href="#_klasse_rodungsbewilligung"></a><a class="link" href="#_klasse_rodungsbewilligung">5.2.2. Klasse <code>Rodungsbewilligung</code></a></h4>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 50%;">
@@ -1156,7 +1206,7 @@ Verzicht, da alle Rodungen geometrisch erfasst werden.</p></td>
 </table>
 </div>
 <div class="sect3">
-<h4 id="_klasse_ersatzmassnahmennlbeschreibung"><a class="anchor" href="#_klasse_ersatzmassnahmennlbeschreibung"></a><a class="link" href="#_klasse_ersatzmassnahmennlbeschreibung">5.1.3. Klasse <code>ErsatzMassnahmenNLBeschreibung</code></a></h4>
+<h4 id="_klasse_ersatzmassnahmennlbeschreibung"><a class="anchor" href="#_klasse_ersatzmassnahmennlbeschreibung"></a><a class="link" href="#_klasse_ersatzmassnahmennlbeschreibung">5.2.3. Klasse <code>ErsatzMassnahmenNLBeschreibung</code></a></h4>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 50%;">
@@ -1181,7 +1231,7 @@ Verzicht, da alle Rodungen geometrisch erfasst werden.</p></td>
 </table>
 </div>
 <div class="sect3">
-<h4 id="_klasse_ersatzverzichtbeschreibung"><a class="anchor" href="#_klasse_ersatzverzichtbeschreibung"></a><a class="link" href="#_klasse_ersatzverzichtbeschreibung">5.1.4. Klasse <code>ErsatzVerzichtBeschreibung</code></a></h4>
+<h4 id="_klasse_ersatzverzichtbeschreibung"><a class="anchor" href="#_klasse_ersatzverzichtbeschreibung"></a><a class="link" href="#_klasse_ersatzverzichtbeschreibung">5.2.4. Klasse <code>ErsatzVerzichtBeschreibung</code></a></h4>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 50%;">
@@ -1206,7 +1256,7 @@ Verzicht, da alle Rodungen geometrisch erfasst werden.</p></td>
 </table>
 </div>
 <div class="sect3">
-<h4 id="_klasse_massnahmenltypbeschreibung"><a class="anchor" href="#_klasse_massnahmenltypbeschreibung"></a><a class="link" href="#_klasse_massnahmenltypbeschreibung">5.1.5. Klasse <code>MassnahmeNLTypBeschreibung</code></a></h4>
+<h4 id="_klasse_massnahmenltypbeschreibung"><a class="anchor" href="#_klasse_massnahmenltypbeschreibung"></a><a class="link" href="#_klasse_massnahmenltypbeschreibung">5.2.5. Klasse <code>MassnahmeNLTypBeschreibung</code></a></h4>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 50%;">
@@ -1231,7 +1281,7 @@ Verzicht, da alle Rodungen geometrisch erfasst werden.</p></td>
 </table>
 </div>
 <div class="sect3">
-<h4 id="_klasse_rodungszwecktypbeschreibung"><a class="anchor" href="#_klasse_rodungszwecktypbeschreibung"></a><a class="link" href="#_klasse_rodungszwecktypbeschreibung">5.1.6. Klasse <code>RodungszweckTypBeschreibung</code></a></h4>
+<h4 id="_klasse_rodungszwecktypbeschreibung"><a class="anchor" href="#_klasse_rodungszwecktypbeschreibung"></a><a class="link" href="#_klasse_rodungszwecktypbeschreibung">5.2.6. Klasse <code>RodungszweckTypBeschreibung</code></a></h4>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 50%;">
@@ -1256,7 +1306,7 @@ Verzicht, da alle Rodungen geometrisch erfasst werden.</p></td>
 </table>
 </div>
 <div class="sect3">
-<h4 id="_klasse_zustaendigkeitstypbeschreibung"><a class="anchor" href="#_klasse_zustaendigkeitstypbeschreibung"></a><a class="link" href="#_klasse_zustaendigkeitstypbeschreibung">5.1.7. Klasse <code>ZustaendigkeitsTypBeschreibung</code></a></h4>
+<h4 id="_klasse_zustaendigkeitstypbeschreibung"><a class="anchor" href="#_klasse_zustaendigkeitstypbeschreibung"></a><a class="link" href="#_klasse_zustaendigkeitstypbeschreibung">5.2.7. Klasse <code>ZustaendigkeitsTypBeschreibung</code></a></h4>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 50%;">
@@ -1281,7 +1331,7 @@ Verzicht, da alle Rodungen geometrisch erfasst werden.</p></td>
 </table>
 </div>
 <div class="sect3">
-<h4 id="_klasse_standtypbeschreibung"><a class="anchor" href="#_klasse_standtypbeschreibung"></a><a class="link" href="#_klasse_standtypbeschreibung">5.1.8. Klasse <code>StandTypBeschreibung</code></a></h4>
+<h4 id="_klasse_standtypbeschreibung"><a class="anchor" href="#_klasse_standtypbeschreibung"></a><a class="link" href="#_klasse_standtypbeschreibung">5.2.8. Klasse <code>StandTypBeschreibung</code></a></h4>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 50%;">
@@ -1306,7 +1356,7 @@ Verzicht, da alle Rodungen geometrisch erfasst werden.</p></td>
 </table>
 </div>
 <div class="sect3">
-<h4 id="_klasse_objekttypbeschreibung"><a class="anchor" href="#_klasse_objekttypbeschreibung"></a><a class="link" href="#_klasse_objekttypbeschreibung">5.1.9. Klasse <code>ObjektTypBeschreibung</code></a></h4>
+<h4 id="_klasse_objekttypbeschreibung"><a class="anchor" href="#_klasse_objekttypbeschreibung"></a><a class="link" href="#_klasse_objekttypbeschreibung">5.2.9. Klasse <code>ObjektTypBeschreibung</code></a></h4>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 50%;">
@@ -1336,7 +1386,7 @@ Verzicht, da alle Rodungen geometrisch erfasst werden.</p></td>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-02-09 12:42:02 UTC
+Last updated 2026-02-09 15:06:10 UTC
 </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>
