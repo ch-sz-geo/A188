@@ -277,7 +277,7 @@ th {
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">letzte Änderung</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2026-01-23</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2026-02-09</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Themen-Nummer</p></td>
@@ -978,15 +978,15 @@ Christoph Angst (ChA), AWN</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Polygon</code></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SZ_Rodungen_V1.Fachdaten.Geometrie.rTyp</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SZ_Rodungen_V1.Fachdaten.Geometrie.rErsatztyp</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Objekt_Typ</code></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">todo</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SZ_Rodungen_V1.Fachdaten.Geometrie.rErsatzmassnahmeart</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>MassnahmenNL_Typ</code></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">todo</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SZ_Rodungen_V1.Fachdaten.Geometrie.Massnahmenbeschreibung</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>MassnahmenNL_Beschreibung</code></p></td>
 </tr>
 </tbody>
@@ -1015,23 +1015,28 @@ Christoph Angst (ChA), AWN</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Nr_Bund</code></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">`SZ_Verfahren_Waldrecht_V1.Fachdaten.Rodung.Name`m</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Vorhaben</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SZ_Verfahren_Waldrecht_V1.Fachdaten.Rodung.Name</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Vorhaben</code></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">todo</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SZ_Rodungen_V1.Fachdaten.Geometrie.ist_Realersatz</code><br>
+Regel: falls eine der zugewiesenen Geometrien TRUE aufweist, wird TRUE gesetzt; andernfalls FALSE</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Ersatz_Real</code></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">todo</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SZ_Rodungen_V1.Stammdaten.Ersatzmassnahmeart.Code</code><br>
+über <code>SZ_Rodungen_V1.Fachdaten.Geometrie.rErsatzmassnahmeart</code><br>
+Regel: BAG wird gebildet über alle Ersatzmassnahmearten der zugeordneten Geometrien</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Ersatz_MassnahmenNL</code></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">todo</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SZ_Rodungen_V1.Stammdaten.Verzichtsgrund.Code</code><br>
+über <code>SZ_Rodungen_V1.Fachdaten.Geometrie.rVerzichtsgrund</code><br>
+Regel: BAG wird gebildet über alle Verzichtsgründe der zugeordneten Geometrien</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Ersatz_Verzicht</code></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">todo</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SZ_Rodungen_V1.Stammdaten.Zustaendigkeit.Code</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Zustaendigkeit</code></p></td>
 </tr>
 <tr>
@@ -1331,7 +1336,7 @@ Verzicht, da alle Rodungen geometrisch erfasst werden.</p></td>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-01-23 06:33:59 UTC
+Last updated 2026-02-09 12:42:02 UTC
 </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>
