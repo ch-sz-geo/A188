@@ -1,8 +1,22 @@
 == Modelltransformationen
+=== Erstintegration
+Die Erstintegration beschreibt die erstmalige Datenübernahme aus dem bisherigen produktiven System ins kantonale Geodatenmodell.
+* Quellmodell: keines; die Sachdaten liegen in einer Access-Datenbank und die Geodaten in einem Geopackage vor
+* Zielmodell: Das hier beschriebene Datenmodell
+
+==== Details zu den Daten
+* Sachdaten
+** **RodungenSZ_Datenbank.accdb** mit Abgabedatum vom 29. Januar 2026
+* Geodaten
+** **Nachteilige_Nutzungen_KTSZ - Kopie.gpkg** mit Stand vom 11.12.2024
+** **Rodungen&Ersatz - Kopie.gpkg** mit Stand vom 26.01.2026
+
+==== Details zum Attributmapping
+Die detaillierte Beschreibung der Überführung der Quellattribute zu ihren Zielattributen entnehme man dem FME-Workpsace, welches im Themenverzeichnis abgelget ist.
+
 === Transformation ins minimale Geodatenmodell des Bundes
 * Quellmodell: Das hier beschriebene Datenmodell
 * Zielmodell: http://models.geo.admin.ch/BAFU/Rodungen_V1_1.ili[Rodungen_V1_1] (Version: 2025-01-27)
-
 
 ==== Struktur `+Objekt+`
 [cols=2*,options="header"]
@@ -127,5 +141,6 @@ Verzicht, da alle Rodungen geometrisch erfasst werden. m| Schwerpunkt
 ifdef::backend-pdf[]
 <<<
 endif::[]
+
 
 
