@@ -230,13 +230,14 @@ th {
 <li><a href="#_erstintegration">5.1. Erstintegration</a>
 <ul class="sectlevel3">
 <li><a href="#_details_zu_den_daten">5.1.1. Details zu den Daten</a></li>
-<li><a href="#_details_zum_attributmapping">5.1.2. Details zum Attributmapping</a></li>
+<li><a href="#_struktur_objekt">5.1.2. Struktur <code>Objekt</code></a></li>
+<li><a href="#_klasse_rodungsbewilligung">5.1.3. Klasse <code>Rodungsbewilligung</code></a></li>
 </ul>
 </li>
 <li><a href="#_transformation_ins_minimale_geodatenmodell_des_bundes">5.2. Transformation ins minimale Geodatenmodell des Bundes</a>
 <ul class="sectlevel3">
-<li><a href="#_struktur_objekt">5.2.1. Struktur <code>Objekt</code></a></li>
-<li><a href="#_klasse_rodungsbewilligung">5.2.2. Klasse <code>Rodungsbewilligung</code></a></li>
+<li><a href="#_struktur_objekt_2">5.2.1. Struktur <code>Objekt</code></a></li>
+<li><a href="#_klasse_rodungsbewilligung_2">5.2.2. Klasse <code>Rodungsbewilligung</code></a></li>
 <li><a href="#_klasse_ersatzmassnahmennlbeschreibung">5.2.3. Klasse <code>ErsatzMassnahmenNLBeschreibung</code></a></li>
 <li><a href="#_klasse_ersatzverzichtbeschreibung">5.2.4. Klasse <code>ErsatzVerzichtBeschreibung</code></a></li>
 <li><a href="#_klasse_massnahmenltypbeschreibung">5.2.5. Klasse <code>MassnahmeNLTypBeschreibung</code></a></li>
@@ -283,7 +284,7 @@ th {
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">letzte Änderung</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2026-02-09</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2026-02-11</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Themen-Nummer</p></td>
@@ -952,9 +953,17 @@ Christoph Angst (ChA), AWN</p></td>
 <div class="sect2">
 <h3 id="_erstintegration"><a class="anchor" href="#_erstintegration"></a><a class="link" href="#_erstintegration">5.1. Erstintegration</a></h3>
 <div class="paragraph">
-<p>Die Erstintegration beschreibt die erstmalige Datenübernahme aus dem bisherigen produktiven System ins kantonale Geodatenmodell.
-* Quellmodell: keines; die Sachdaten liegen in einer Access-Datenbank und die Geodaten in einem Geopackage vor
-* Zielmodell: Das hier beschriebene Datenmodell</p>
+<p>Die Erstintegration beschreibt die erstmalige Datenübernahme aus dem bisherigen produktiven System ins kantonale Geodatenmodell.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Quellmodell: keines; die Sachdaten liegen in einer Access-Datenbank und die Geodaten in einem Geopackage vor</p>
+</li>
+<li>
+<p>Zielmodell: Das hier beschriebene Datenmodell</p>
+</li>
+</ul>
 </div>
 <div class="sect3">
 <h4 id="_details_zu_den_daten"><a class="anchor" href="#_details_zu_den_daten"></a><a class="link" href="#_details_zu_den_daten">5.1.1. Details zu den Daten</a></h4>
@@ -975,10 +984,10 @@ Christoph Angst (ChA), AWN</p></td>
 <div class="ulist">
 <ul>
 <li>
-<p><strong>Nachteilige_Nutzungen_KTSZ - Kopie.gpkg</strong> mit Stand vom 11.12.2024</p>
+<p><strong>Nachteilige_Nutzungen_KTSZ - Kopie.gpkg</strong> mit Stand vom 11.12.2024 (weiter unten als "Geo-1" bezeichnet)</p>
 </li>
 <li>
-<p><strong>Rodungen&amp;Ersatz - Kopie.gpkg</strong> mit Stand vom 26.01.2026</p>
+<p><strong>Rodungen&amp;Ersatz - Kopie.gpkg</strong> mit Stand vom 26.01.2026 (weiter unten als "Geo-2" bezeichnet)</p>
 </li>
 </ul>
 </div>
@@ -987,10 +996,204 @@ Christoph Angst (ChA), AWN</p></td>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_details_zum_attributmapping"><a class="anchor" href="#_details_zum_attributmapping"></a><a class="link" href="#_details_zum_attributmapping">5.1.2. Details zum Attributmapping</a></h4>
-<div class="paragraph">
-<p>Die detaillierte Beschreibung der Überführung der Quellattribute zu ihren Zielattributen entnehme man dem FME-Workpsace, welches im Themenverzeichnis abgelget ist.</p>
+<h4 id="_struktur_objekt"><a class="anchor" href="#_struktur_objekt"></a><a class="link" href="#_struktur_objekt">5.1.2. Struktur <code>Objekt</code></a></h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Quellattribut</th>
+<th class="tableblock halign-left valign-top">Zielattribut</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">- - -</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Punkt</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Geo-1: <code>Rodungen_Ersatz.Geometrie</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><code>SZ_Rodungen_V1.Fachdaten.Flaeche.Geometrie</code></code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SZ_Rodungen_V1.Fachdaten.Geometrie.rErsatztyp</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Objekt_Typ</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SZ_Rodungen_V1.Fachdaten.Geometrie.rErsatzmassnahmeart</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>MassnahmenNL_Typ</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SZ_Rodungen_V1.Fachdaten.Geometrie.Massnahmenbeschreibung</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>MassnahmenNL_Beschreibung</code></p></td>
+</tr>
+</tbody>
+</table>
 </div>
+<div class="sect3">
+<h4 id="_klasse_rodungsbewilligung"><a class="anchor" href="#_klasse_rodungsbewilligung"></a><a class="link" href="#_klasse_rodungsbewilligung">5.1.3. Klasse <code>Rodungsbewilligung</code></a></h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Quellattribut</th>
+<th class="tableblock halign-left valign-top">Zielattribut</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SZ_Verfahren_Waldrecht_V1.Fachdaten.Rodung.Kennung</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Nr_Kanton</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SZ_Verfahren_Waldrecht_V1.Fachdaten.Rodung.Kennung_Bund</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Nr_Bund</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SZ_Verfahren_Waldrecht_V1.Fachdaten.Rodung.Name</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Vorhaben</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SZ_Rodungen_V1.Fachdaten.Geometrie.ist_Realersatz</code><br>
+Regel: falls eine der zugewiesenen Geometrien TRUE aufweist, wird TRUE gesetzt; andernfalls FALSE</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Ersatz_Real</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SZ_Rodungen_V1.Stammdaten.Ersatzmassnahmeart.Code</code><br>
+über <code>SZ_Rodungen_V1.Fachdaten.Geometrie.rErsatzmassnahmeart</code><br>
+Regel: BAG wird gebildet über alle Ersatzmassnahmearten der zugeordneten Geometrien</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Ersatz_MassnahmenNL</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SZ_Rodungen_V1.Stammdaten.Verzichtsgrund.Code</code><br>
+über <code>SZ_Rodungen_V1.Fachdaten.Geometrie.rVerzichtsgrund</code><br>
+Regel: BAG wird gebildet über alle Verzichtsgründe der zugeordneten Geometrien</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Ersatz_Verzicht</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SZ_Rodungen_V1.Stammdaten.Zustaendigkeit.Code</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Zustaendigkeit</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SZ_Rodungen_V1.Fachdaten.Rodung.Rodungsflaeche_def</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Flaeche_Rodung_def</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SZ_Rodungen_V1.Fachdaten.Rodung.Rodungsflaeche_temp</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Flaeche_Rodung_temp</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SZ_Rodungen_V1.Fachdaten.Rodung.Rodungsflaeche_histo</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Flaeche_Fruehere_Rodung15Jahre</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SZ_Rodungen_V1.Fachdaten.Rodung.Realersatzflaeche</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Flaeche_Ersatz_Real</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SZ_Rodungen_V1.Fachdaten.Rodung.Verzichtsflaeche</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Flaeche_Ersatz_Verzicht</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SZ_Rodungen_V1.Fachdaten.Rodung.Massnahmeflaeche_total</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Flaeche_Ersatz_MassnahmenNL</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">über Stammdaten lösen</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>MassnahmenNL_Typ</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SZ_Rodungen_V1.Fachdaten.Rodung.Massnahmenbeschreibung</code><br>
+Achtung: MTEXT; Zeilenumbrüche sind mit einem Leerschlag zu ersetzen</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>MassnahmenNL_Beschreibung</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SZ_Rodungen_V1.Fachdaten.Rodung.Massnahmeflaeche_Wald</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>FlaecheMassnahmeNL_ImWaldareal</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SZ_Rodungen_V1.Fachdaten.Rodung.Massnahmeflaeche_Nichtwald</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>FlaecheMassnahmeNL_AusserhalbWaldareal</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SZ_Rodungen_V1.Fachdaten.Rodung.hat_Massnahmenpool</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>MassnahmeNL_Pool</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SZ_Rodungen_V1.Fachdaten.Rodung.Massnahmenbemerkung</code><br>
+Achtung: MTEXT; Zeilenumbrüche sind mit einem Leerschlag zu ersetzen</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Massnahme_WeitereBemerkungen</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SZ_Rodungen_V1.Fachdaten.Rodung.rRodungszweck</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Rodungszweck</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SZ_Rodungen_V1.Fachdaten.Rodung.Rodungszweckbemerkung</code><br>
+Achtung: MTEXT; Zeilenumbrüche sind mit einem Leerschlag zu ersetzen</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Rodungszweck_Bemerkungen</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SZ_Rodungen_V1.Fachdaten.Rodung.Rodungsfrist</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Frist_Rodung</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SZ_Rodungen_V1.Fachdaten.Rodung.Rodungsfristbemerkung</code><br>
+Achtung: MTEXT; Zeilenumbrüche sind mit einem Leerschlag zu ersetzen</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Frist_Rodung_Bemerkung</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SZ_Rodungen_V1.Fachdaten.Rodung.Ersatzfrist</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Frist_Ersatz</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SZ_Rodungen_V1.Fachdaten.Rodung.Ersatzfristbemerkung</code><br>
+Achtung: MTEXT; Zeilenumbrüche sind mit einem Leerschlag zu ersetzen</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Frist_Ersatz_Bemerkung</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SZ_Rodungen_V1.Fachdaten.Rodung.hat_Ausgleich</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Ausgleich</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">todo<br>
+Soll über den Verfahrensstatus realisiert werden</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Stand_Abgeschlossen</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SZ_Verfahren_Waldrecht_V1.Fachdaten.Rodung.Abschlussdatum</code><br>
+todo: Abhängigkeit zu <code>Stand_Abgeschlossen</code> beachten</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Datum_Abgeschlossen</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SZ_Verfahren_Waldrecht_V1.Fachdaten.Verfahren.Verfuegungsdatum</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Verfuegung_Datum</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SZ_Verfahren_Waldrecht_V1.Fachdaten.Verfahren.Verfuegungslink</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Verfuegung_URL</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SZ_Verfahren_Waldrecht_V1.Fachdaten.Rodung.Referenz</code><br>
+Achtung: MTEXT; Zeilenumbrüche sind mit einem Leerschlag zu ersetzen</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Weitere_Referenzen</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">- - -<br>
+Verzicht, da alle Rodungen geometrisch erfasst werden.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Schwerpunkt</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">todo</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Objekte</code></p></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 <div class="sect2">
@@ -1006,7 +1209,7 @@ Christoph Angst (ChA), AWN</p></td>
 </ul>
 </div>
 <div class="sect3">
-<h4 id="_struktur_objekt"><a class="anchor" href="#_struktur_objekt"></a><a class="link" href="#_struktur_objekt">5.2.1. Struktur <code>Objekt</code></a></h4>
+<h4 id="_struktur_objekt_2"><a class="anchor" href="#_struktur_objekt_2"></a><a class="link" href="#_struktur_objekt_2">5.2.1. Struktur <code>Objekt</code></a></h4>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 50%;">
@@ -1043,7 +1246,7 @@ Christoph Angst (ChA), AWN</p></td>
 </table>
 </div>
 <div class="sect3">
-<h4 id="_klasse_rodungsbewilligung"><a class="anchor" href="#_klasse_rodungsbewilligung"></a><a class="link" href="#_klasse_rodungsbewilligung">5.2.2. Klasse <code>Rodungsbewilligung</code></a></h4>
+<h4 id="_klasse_rodungsbewilligung_2"><a class="anchor" href="#_klasse_rodungsbewilligung_2"></a><a class="link" href="#_klasse_rodungsbewilligung_2">5.2.2. Klasse <code>Rodungsbewilligung</code></a></h4>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 50%;">
@@ -1386,7 +1589,7 @@ Verzicht, da alle Rodungen geometrisch erfasst werden.</p></td>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-02-09 15:06:10 UTC
+Last updated 2026-02-11 10:29:51 UTC
 </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>
