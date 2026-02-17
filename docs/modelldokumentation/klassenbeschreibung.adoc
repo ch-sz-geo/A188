@@ -298,7 +298,6 @@ m|rGemeinde
 3+a| * Die erste Gemeinde ist die führende. Ihr soll das Beziehungsattribut `+ist_fuehrend+` auf TRUE gesetzt werden; bei den anderen auf FALSE.
 |===
 
-
 ==== Klasse `+Geometrie+`
 Die Klasse `+Geometrie+` enthält die allgemeinen, für alle geometrischen Klassen gemeinsamen Attribute. Die Klasse selber ist abstrakt: Es gibt keine Objekte +Geometrieg+, sondern nur Objekte von den spezialisierten Klassen.
 
@@ -342,9 +341,43 @@ m| rMassnahme
 | Fremdschlüssel zur Massnahme (Stammdaten)
 | ccee2bad-419e-454e-9e0f-9ef2ae2d4d44
 | öffentlich
+m| rGenauigkeit
+| Fremdschlüssel zur Genauigkeit (Stammdaten)
+| ccee2bad-419e-454e-9e0f-9ef2ae2d4d44
+| öffentlich
+m| rRodungsbewilligung
+| Fremdschlüssel zur Rodungsbewilligung, zu welcher die Geometrie zugeordnet ist
+| ccee2bad-419e-454e-9e0f-9ef2ae2d4d44
+| öffentlich
 |===
 
+==== Klasse `+Lage+`
+Die Klasse `+Lage+` führt die Geometrie als Punkt. Sie ist eine Spezialisierung der Klasse `+Geometrie+`.
 
+[cols=4*,options="header"]
+|===
+| Name | Beschreibung | Beispiel | Freigabe
+m| ist_Schwerpunkt
+| Gibt an, ob die Punktegeometrie als Schwerpunkt oder als verallgemeinerter Rodungsort dient.
+| FALSE
+| öffentlich
+m| Geometrie
+| Geometrie des Objektes als Punkt
+| (ohne Beispiel)
+| öffentlich
+|===
+
+==== Klasse `+Flaeche+`
+Die Klasse `+Flaeche+` führt die Geometrie als Einzelfläche. Sie ist eine Spezialisierung der Klasse `+Geometrie+`.
+
+[cols=4*,options="header"]
+|===
+| Name | Beschreibung | Beispiel | Freigabe
+m| Geometrie
+| Geometrie des Objektes als Einzelfläche
+| (ohne Beispiel)
+| öffentlich
+|===
 
 
 ifdef::backend-pdf[]
