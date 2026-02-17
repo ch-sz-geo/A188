@@ -357,7 +357,7 @@ Die Klasse `+Lage+` führt die Geometrie als Punkt. Sie ist eine Spezialisierung
 * entweder das Gebiet der Rodungs- oder Ersatzfläche als Punkt kennzeichnen
 * oder als Schwerpunkt des Vorhabens dienen.
 
-Im ersten Fall wird ^+ist_Schwerpunkt+` FALSE, im zweiten Fall TRUE gesetzt.
+Im ersten Fall wird `+ist_Schwerpunkt+` FALSE, im zweiten Fall TRUE gesetzt.
 
 [cols=4*,options="header"]
 |===
