@@ -215,12 +215,14 @@ th {
 <li><a href="#_klasse_massnahme">4.1.3. Klasse <code>Massnahme</code></a></li>
 <li><a href="#_klasse_ersatzmassnahmeart">4.1.4. Klasse <code>Ersatzmassnahmeart</code></a></li>
 <li><a href="#_klasse_rodungszweck">4.1.5. Klasse <code>Rodungszweck</code></a></li>
-<li><a href="#_klasse_typ_2">4.1.6. Klasse <code>Typ</code></a></li>
 </ul>
 </li>
 <li><a href="#_topic_fachdaten">4.2. Topic <code>Fachdaten</code></a>
 <ul class="sectlevel3">
-<li><a href="#_klasse_klasse1">4.2.1. Klasse <code>Klasse1</code></a></li>
+<li><a href="#_klasse_rodungsbewilligung">4.2.1. Klasse <code>Rodungsbewilligung</code></a></li>
+<li><a href="#_klasse_geometrie">4.2.2. Klasse <code>Geometrie</code></a></li>
+<li><a href="#_klasse_lage">4.2.3. Klasse <code>Lage</code></a></li>
+<li><a href="#_klasse_flaeche">4.2.4. Klasse <code>Flaeche</code></a></li>
 </ul>
 </li>
 </ul>
@@ -231,13 +233,13 @@ th {
 <ul class="sectlevel3">
 <li><a href="#_details_zu_den_daten">5.1.1. Details zu den Daten</a></li>
 <li><a href="#_struktur_objekt">5.1.2. Struktur <code>Objekt</code></a></li>
-<li><a href="#_klasse_rodungsbewilligung">5.1.3. Klasse <code>Rodungsbewilligung</code></a></li>
+<li><a href="#_klasse_rodungsbewilligung_2">5.1.3. Klasse <code>Rodungsbewilligung</code></a></li>
 </ul>
 </li>
 <li><a href="#_transformation_ins_minimale_geodatenmodell_des_bundes">5.2. Transformation ins minimale Geodatenmodell des Bundes</a>
 <ul class="sectlevel3">
 <li><a href="#_struktur_objekt_2">5.2.1. Struktur <code>Objekt</code></a></li>
-<li><a href="#_klasse_rodungsbewilligung_2">5.2.2. Klasse <code>Rodungsbewilligung</code></a></li>
+<li><a href="#_klasse_rodungsbewilligung_3">5.2.2. Klasse <code>Rodungsbewilligung</code></a></li>
 <li><a href="#_klasse_ersatzmassnahmennlbeschreibung">5.2.3. Klasse <code>ErsatzMassnahmenNLBeschreibung</code></a></li>
 <li><a href="#_klasse_ersatzverzichtbeschreibung">5.2.4. Klasse <code>ErsatzVerzichtBeschreibung</code></a></li>
 <li><a href="#_klasse_massnahmenltypbeschreibung">5.2.5. Klasse <code>MassnahmeNLTypBeschreibung</code></a></li>
@@ -731,75 +733,6 @@ Christoph Angst (ChA), AWN</p></td>
 </tbody>
 </table>
 </div>
-<div class="sect3">
-<h4 id="_klasse_typ_2"><a class="anchor" href="#_klasse_typ_2"></a><a class="link" href="#_klasse_typ_2">4.1.6. Klasse <code>Typ</code></a></h4>
-<div class="paragraph">
-<p>Über den Typ wird die Art der Geometrie festgelegt.</p>
-</div>
-<div class="paragraph">
-<p>In der Klasse <code>Typ</code> wurde anfänglich auch der Typ des Wirkbereiches aufgeführt. Weil ein Wirkbereich jedoch stets gleich symbolisiert wird, wurde entschieden, auf diesen Eintrag zu verzichtet.</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 25%;">
-<col style="width: 25%;">
-<col style="width: 25%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Name</th>
-<th class="tableblock halign-left valign-top">Beschreibung</th>
-<th class="tableblock halign-left valign-top">Beispiel</th>
-<th class="tableblock halign-left valign-top">Freigabe</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>OID</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">technischer Objektidentifikator</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ceaa37a9-8614-43fc-9a8b-688f95c30218</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Code</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Code des Listeneintrages; entspricht in INTERLIS dem Wert der Aufzählung und muss ein gültiger INTERLIS-Name sein (siehe <a href="https://www.interlis.ch/dokumentation">INTERLIS-Referenzhandbuch</a>)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ausserhalb_Bauzonen_statisch</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Name</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Bezeichnung des Katalogeintrages, wie er den Nutzenden angezeigt wird</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Waldgrenze ausserhalb Bauzone (statisch)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Abkuerzung</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Kurzform des Katalogeintrages</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">WGraB_s</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SortierNr</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Reihenfolge des Katalogeintrages in der Auswahlliste</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Bemerkung</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Erläuterung, welche den Katalogeintrag näher beschreibt</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Statische Waldgrenze in Gebieten ausserhalb der Bauzonen, in denen der Kanton eine Zunahme des Waldes verhindern will.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Symbol</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Bild des Legendeneintrages; codiert als Base64-Wert</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">iVBORw0KGg&#8230;&#8203; (gekürzt)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
-</tr>
-</tbody>
-</table>
-</div>
 </div>
 <div class="sect2">
 <h3 id="_topic_fachdaten"><a class="anchor" href="#_topic_fachdaten"></a><a class="link" href="#_topic_fachdaten">4.2. Topic <code>Fachdaten</code></a></h3>
@@ -807,9 +740,9 @@ Christoph Angst (ChA), AWN</p></td>
 <p>Das Topic <code>Fachdaten</code> umfasst die eigentlichen, fachlichen Klassen des Themas.</p>
 </div>
 <div class="sect3">
-<h4 id="_klasse_klasse1"><a class="anchor" href="#_klasse_klasse1"></a><a class="link" href="#_klasse_klasse1">4.2.1. Klasse <code>Klasse1</code></a></h4>
+<h4 id="_klasse_rodungsbewilligung"><a class="anchor" href="#_klasse_rodungsbewilligung"></a><a class="link" href="#_klasse_rodungsbewilligung">4.2.1. Klasse <code>Rodungsbewilligung</code></a></h4>
 <div class="paragraph">
-<p>Die Klasse <code>Klasse1</code> führt &#8230;&#8203;..</p>
+<p>Die Klasse <code>Rodungsbewilligung</code> führt die Daten zur Rodungsbewilligung.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -858,84 +791,431 @@ Christoph Angst (ChA), AWN</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>gueltigVon</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Datum, an dem das Objekt rechtskräftig wurde bzw. wird. Es gilt der Zeitpunkt mittags um 12:00 Uhr. Das Datum kann sowohl in der Vergangenheit wie auch in der Zukunft liegen.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2024-01-01</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Kennung</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kantonale Nummer, welche die Rodungsbewilligung eindeutig kennzeichnet.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">RO-08-01</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>gueltigBis</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Datum, an dem das Objekt rechtskräftig aufgehoben wurde bzw. wird. Es gilt der Zeitpunkt mittags um 12:00 Uhr. Das Datum kann sowohl in der Vergangenheit wie auch in der Zukunft liegen.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2030-12-31</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Kennung_Bund</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Nummer des Vorhabens, falls die Rodung nach Bundesverfahren läuft.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SZ 2318-36</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Bemerkung</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">öffentliche Bemerkung zum Objekt</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Das ist eine öffentliche Bemerkung</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Beschreibung</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name oder Beschreibung des Vorhabens</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Erschliessung der Abbaukavernen</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>hat_Realersatzpflicht</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Angabe, ob Realersatz zu leisten ist.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ja</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Rodungsflaeche_def</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Fläche in m^2, die definitiv geordet wird</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1234.00</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Rodungsflaeche_temp</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Fläche in m^2, die temporär geordet wird</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4321.00</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Rodungsflaeche_histo</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Fläche in m^2 früherer Rodungen der letzten 15 Jahre</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">9876.00</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Realersatzflaeche</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Fläche in m^2 des Realersatzes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1212.00</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Verzichtsflaeche</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Fläche in m^2, für die auf Rodungsersatz verzichtet wird</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">50.00</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Massnahmeflaeche_total</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Gesamtfläche in m^2, auf der Massnahmen zu Gunsten des Natur- und Landschaftsschutzes zu leisten sind</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">850.00</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>EA_Flaeche_total</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Gesamtfläche in m^2, auf der Ersatzaufforstung geleistet wird</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">125.00</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>EA_Flaeche_gebietsfremd</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Gesamtfläche in m^2, auf der Ersatzaufforstung in einem anderen Gebiet geleistet wird</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">215.00</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Massnahmebeschreibung</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Beschreibung der Ersatzmassnamen zu Gunsten des Natur- und Landschaftsschutzes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">eine Beschreibung</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Massnahmeflaeche_Wald</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Fläche in m^2 der Natur- und Landschaftsschutzmassnahmen als Ersatz im Waldareal</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">60.00</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Massnahmeflaeche_Nichtwald</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Fläche in m^2 der Natur- und Landschaftsschutzmassnahmen als Ersatz ausserhalb des Waldareals</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">20.00</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>hat_Massnahmenpool</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Angabe, ob die Ersatzmassnahmen im Rahmen eines Massnahmenpools realisiert werden</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ja</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Massnahmenbemerkung</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ergänzende Bemerkung zu den Ersatzmassnahmen</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">eine Bemerkung</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Rodungszweckbemerkung</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ergänzende Bemerkung zum Rodungszweck</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">eine Bemerkung</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Rodungsfrist</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Frist zur Benutzung der Rodungsbewilligung</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2028-06-30</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Fristverlaengerung_RO</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Frist, bis zu welcher die Rodungsfrist verlängert wird</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2028-12-31</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Rodungsfristbemerkung</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bemerkung zur Rodungsfrist</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Die 90 Tage Rodungsfrist beginnen mit Rechtskraft der Rodungsbewilligung</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Ersatzfrist</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Frist zur Erfüllung der Ersatzmassnahmen</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2029-12-31</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Ersatzfristbemerkung</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bemerkung zur Ersatzfrist</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Die Ersatzfrist beginnt mit Rechtskraft der Rodungsbewilligung</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Fristverlaengerung_EA</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Frist, bis zu welcher die Ersatzaufforstungt verlängert wird</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2031-12-31</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>hat_Finanzausgleich</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">finanzieller Ausgleich im Fall von erheblichen Vorteilen</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">nein</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Abschlussdatum</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Datum, an dem das Vorhaben inkl. der Ersatzmassnahmen abgeschlossen ist</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2025-04-15</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Verfuegungsdatum</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Datum der Verfügung</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2015-03-03</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Referenz</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Andere Rodungsvorhaben, die mit diesem Dossier verbunden sind, sowie weitere Referenzen</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">RO-99-75, RO-99-76, RO-99-77</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Erfassungsdatum_GIS</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Datum, an dem die Rodungsgeometrie erfasst wurde</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2018-02-19</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Baugesuchsnummer</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Referenz zum Baugesuch</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PB-22-005</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Bemerkung_intern</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Erläuterung, welche den Katalogeintrag näher beschreibt</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Dieser Status wird für alle Objekte verwendet, bei denen aktuell eine Nachführung läuft.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span style="color:red;">amtsintern</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">interne Bemerkung</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Das ist eine interne Bemerkung.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span style="color:red;">intern</span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Bemerkung</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bemerkung</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Das ist eine Bemerkung.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock"><strong>Beziehungsattribute</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>rErsatzmassnahmeart</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Fremdschlüssel zur Ersatzmassnahmeart (Stammdaten)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ccee2bad-419e-454e-9e0f-9ef2ae2d4d44</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>rVerzichtsgrund</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Fremdschlüssel zum Verzichtsgrund (Stammdaten)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ccee2bad-419e-454e-9e0f-9ef2ae2d4d44</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>rZustaendigkeit</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Fremdschlüssel zur Zustaendigkeit (Stammdaten)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ccee2bad-419e-454e-9e0f-9ef2ae2d4d44</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>rMassnahme</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Fremdschlüssel zur Massnahme (Stammdaten)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ccee2bad-419e-454e-9e0f-9ef2ae2d4d44</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>rRodungszweck</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Fremdschlüssel zum Rodungszweck (Stammdaten)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ccee2bad-419e-454e-9e0f-9ef2ae2d4d44</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>rRodungsstand</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Fremdschlüssel zum Rodungsstand (Stammdaten)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ccee2bad-419e-454e-9e0f-9ef2ae2d4d44</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>rGemeinde</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Fremdschlüssel zur Gemeinde (Stammdaten)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ccee2bad-419e-454e-9e0f-9ef2ae2d4d44</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock"><strong>Geometrie</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Geometrie</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Geometrie des Objektes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">(ohne Beispiel)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock">- - -</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock"><strong>Bedingungen</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Kennung</code></p></td>
+<td class="tableblock halign-left valign-top" colspan="3"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>Die Werte müssen innerhalb der Klasse eindeutig sein.</p>
+</li>
+<li>
+<p>Nach der Vergabe muss der Wert unverändert bleiben.</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>rGemeinde</code></p></td>
+<td class="tableblock halign-left valign-top" colspan="3"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>Die erste Gemeinde ist die führende. Ihr soll das Beziehungsattribut <code>ist_fuehrend</code> auf TRUE gesetzt werden; bei den anderen auf FALSE.</p>
+</li>
+</ul>
+</div></div></td>
 </tr>
 </tbody>
 </table>
+</div>
+<div class="sect3">
+<h4 id="_klasse_geometrie"><a class="anchor" href="#_klasse_geometrie"></a><a class="link" href="#_klasse_geometrie">4.2.2. Klasse <code>Geometrie</code></a></h4>
+<div class="paragraph">
+<p>Die Klasse <code>Geometrie</code> enthält die allgemeinen, für alle geometrischen Klassen gemeinsamen Attribute. Die Klasse selber ist abstrakt: Es gibt keine Objekte Geometrieg, sondern nur Objekte von den spezialisierten Klassen.</p>
+</div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
-<col style="width: 10%;">
-<col style="width: 10%;">
-<col style="width: 10%;">
-<col style="width: 60%;">
-<col style="width: 10%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-left valign-top">Attribute</th>
-<th class="tableblock halign-left valign-top">Anzahl</th>
-<th class="tableblock halign-left valign-top">Typ</th>
+<th class="tableblock halign-left valign-top">Name</th>
 <th class="tableblock halign-left valign-top">Beschreibung</th>
+<th class="tableblock halign-left valign-top">Beispiel</th>
 <th class="tableblock halign-left valign-top">Freigabe</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Code</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Text</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Code des Katalogeintrages; entspricht dem Wert der Aufzählung in einem INTERLIS-Modell. Der Code beinhaltet den "Wert für die Maschine" und dient z.B. zur Steuerung einer Applikation (z.B. Farbvergabe); Änderungen am Code sind mit allen Parteien, die am Datenaustausch beteiligt sind, abzusprechen.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>OID</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">technischer Objektidentifikator</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ceaa37a9-8614-43fc-9a8b-688f95c30218</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Name</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Zahl</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">für den Benutzer lesbarer Name des Katalogeintrages Der Name beinhaltet den Wert "für den Menschen".</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>erfasstVon</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Loginname der Person, welche den Datensatz erstellt hat (Autor); wird durch das System gesetzt</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Musterha</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span style="color:red;">intern</span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>erfasstAm</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Datum und Zeit, an dem der Datensatz erstellt wurde; wird durch das System gesetzt</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1980-03-21T15:38:12</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">SortierNr</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Zahl</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Die Sortiernummer bestimmt die Position eines Wertes in der Liste: je tiefer die Zahl, desto weiter oben steht der Wert in der Liste.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>geaendertVon</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Loginname der Person, welche den Datensatz zuletzt geändert hat (Editor); wird durch das System gesetzt</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Muelleran</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span style="color:red;">intern</span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>geaendertAm</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Datum und Zeit, an dem der Datensatz zuletzt geändert wurde; wird durch das System gesetzt</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2024-07-30T08:07:57</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Massnahmebeschreibung</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Beschreibung der Ersatzmassnahme zu Gunsten des Natur- und Landschaftsschutzes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Renaturierung alter Steinbruch</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Bemerkung</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Bemerkung</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Text</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Erläuterungen zum Objekt</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Das ist eine Bemerkung.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock"><strong>Beziehungsattribute</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>rRodungstyp</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Fremdschlüssel zum Rodungstyp (Stammdaten)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ccee2bad-419e-454e-9e0f-9ef2ae2d4d44</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>rMassnahme</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Fremdschlüssel zur Massnahme (Stammdaten)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ccee2bad-419e-454e-9e0f-9ef2ae2d4d44</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>rGenauigkeit</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Fremdschlüssel zur Genauigkeit (Stammdaten)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ccee2bad-419e-454e-9e0f-9ef2ae2d4d44</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>rRodungsbewilligung</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Fremdschlüssel zur Rodungsbewilligung, zu welcher die Geometrie zugeordnet ist</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ccee2bad-419e-454e-9e0f-9ef2ae2d4d44</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_klasse_lage"><a class="anchor" href="#_klasse_lage"></a><a class="link" href="#_klasse_lage">4.2.3. Klasse <code>Lage</code></a></h4>
+<div class="paragraph">
+<p>Die Klasse <code>Lage</code> führt die Geometrie als Punkt. Sie ist eine Spezialisierung der Klasse <code>Geometrie</code>.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Beschreibung</th>
+<th class="tableblock halign-left valign-top">Beispiel</th>
+<th class="tableblock halign-left valign-top">Freigabe</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ist_Schwerpunkt</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Gibt an, ob die Punktegeometrie als Schwerpunkt oder als verallgemeinerter Rodungsort dient.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">FALSE</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Geometrie</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Geometrie des Objektes als Punkt</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(ohne Beispiel)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_klasse_flaeche"><a class="anchor" href="#_klasse_flaeche"></a><a class="link" href="#_klasse_flaeche">4.2.4. Klasse <code>Flaeche</code></a></h4>
+<div class="paragraph">
+<p>Die Klasse <code>Flaeche</code> führt die Geometrie als Einzelfläche. Sie ist eine Spezialisierung der Klasse <code>Geometrie</code>.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Beschreibung</th>
+<th class="tableblock halign-left valign-top">Beispiel</th>
+<th class="tableblock halign-left valign-top">Freigabe</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Geometrie</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Geometrie des Objektes als Einzelfläche</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(ohne Beispiel)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
 </tr>
 </tbody>
@@ -1030,7 +1310,7 @@ Christoph Angst (ChA), AWN</p></td>
 </table>
 </div>
 <div class="sect3">
-<h4 id="_klasse_rodungsbewilligung"><a class="anchor" href="#_klasse_rodungsbewilligung"></a><a class="link" href="#_klasse_rodungsbewilligung">5.1.3. Klasse <code>Rodungsbewilligung</code></a></h4>
+<h4 id="_klasse_rodungsbewilligung_2"><a class="anchor" href="#_klasse_rodungsbewilligung_2"></a><a class="link" href="#_klasse_rodungsbewilligung_2">5.1.3. Klasse <code>Rodungsbewilligung</code></a></h4>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 50%;">
@@ -1245,7 +1525,7 @@ Verzicht, da alle Rodungen geometrisch erfasst werden.</p></td>
 </table>
 </div>
 <div class="sect3">
-<h4 id="_klasse_rodungsbewilligung_2"><a class="anchor" href="#_klasse_rodungsbewilligung_2"></a><a class="link" href="#_klasse_rodungsbewilligung_2">5.2.2. Klasse <code>Rodungsbewilligung</code></a></h4>
+<h4 id="_klasse_rodungsbewilligung_3"><a class="anchor" href="#_klasse_rodungsbewilligung_3"></a><a class="link" href="#_klasse_rodungsbewilligung_3">5.2.2. Klasse <code>Rodungsbewilligung</code></a></h4>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 50%;">
@@ -1583,7 +1863,7 @@ Regel: Es werden nur Objekte der Klasse <code>Lage</code> transferiert, welche <
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-02-17 12:40:34 UTC
+Last updated 2026-02-17 15:37:36 UTC
 </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>
