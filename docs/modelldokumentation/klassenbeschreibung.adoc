@@ -352,7 +352,12 @@ m| rRodungsbewilligung
 |===
 
 ==== Klasse `+Lage+`
-Die Klasse `+Lage+` führt die Geometrie als Punkt. Sie ist eine Spezialisierung der Klasse `+Geometrie+`.
+Die Klasse `+Lage+` führt die Geometrie als Punkt. Sie ist eine Spezialisierung der Klasse `+Geometrie+`. Der Punktgeometrie hat eine Doppelfunktion. Sie kann:
+
+* entweder das Gebiet der Rodungs- oder Ersatzfläche als Punkt kennzeichnen
+* oder als Schwerpunkt des Vorhabens dienen.
+
+Im ersten Fall wird ^+ist_Schwerpunkt+` FALSE, im zweiten Fall TRUE gesetzt.
 
 [cols=4*,options="header"]
 |===
@@ -365,6 +370,9 @@ m| Geometrie
 | Geometrie des Objektes als Punkt
 | (ohne Beispiel)
 | öffentlich
+4+| *Bedingungen*
+m|ist_Schwerpunkt
+3+a| * Falls TRUE, dann muss der Punkt innerhalb der grössten Teilfäche des Vorhabens liegen.
 |===
 
 ==== Klasse `+Flaeche+`
@@ -378,7 +386,6 @@ m| Geometrie
 | (ohne Beispiel)
 | öffentlich
 |===
-
 
 ifdef::backend-pdf[]
 <<<
