@@ -1158,7 +1158,20 @@ Christoph Angst (ChA), AWN</p></td>
 <div class="sect3">
 <h4 id="_klasse_lage"><a class="anchor" href="#_klasse_lage"></a><a class="link" href="#_klasse_lage">4.2.3. Klasse <code>Lage</code></a></h4>
 <div class="paragraph">
-<p>Die Klasse <code>Lage</code> führt die Geometrie als Punkt. Sie ist eine Spezialisierung der Klasse <code>Geometrie</code>.</p>
+<p>Die Klasse <code>Lage</code> führt die Geometrie als Punkt. Sie ist eine Spezialisierung der Klasse <code>Geometrie</code>. Der Punktgeometrie hat eine Doppelfunktion. Sie kann:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>entweder das Gebiet der Rodungs- oder Ersatzfläche als Punkt kennzeichnen</p>
+</li>
+<li>
+<p>oder als Schwerpunkt des Vorhabens dienen.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Im ersten Fall wird ^ist_Schwerpunkt` FALSE, im zweiten Fall TRUE gesetzt.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -1187,6 +1200,19 @@ Christoph Angst (ChA), AWN</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Geometrie des Objektes als Punkt</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">(ohne Beispiel)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock"><strong>Bedingungen</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ist_Schwerpunkt</code></p></td>
+<td class="tableblock halign-left valign-top" colspan="3"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>Falls TRUE, dann muss der Punkt innerhalb der grössten Teilfäche des Vorhabens liegen.</p>
+</li>
+</ul>
+</div></div></td>
 </tr>
 </tbody>
 </table>
@@ -1863,7 +1889,7 @@ Regel: Es werden nur Objekte der Klasse <code>Lage</code> transferiert, welche <
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-02-17 15:37:36 UTC
+Last updated 2026-02-17 15:49:22 UTC
 </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>
