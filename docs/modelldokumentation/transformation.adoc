@@ -87,11 +87,13 @@ Verzicht, da alle Rodungen geometrisch erfasst werden. m| Schwerpunkt
 [cols=2*,options="header"]
 |===
 | Quellattribut | Zielattribut
-| `+SZ_Rodungen_V1.Fachdaten.Punkt.Geometrie+` m| Punkt
+| `+SZ_Rodungen_V1.Fachdaten.Lage.Geometrie+` m| Punkt
 | `+SZ_Rodungen_V1.Fachdaten.Flaeche.Geometrie+` m| Polygon
-| `+SZ_Rodungen_V1.Fachdaten.Geometrie.rErsatztyp+` m| Objekt_Typ
-| `+SZ_Rodungen_V1.Fachdaten.Geometrie.rErsatzmassnahmeart+` m| MassnahmenNL_Typ
-| `+SZ_Rodungen_V1.Fachdaten.Geometrie.Massnahmenbeschreibung+` m| MassnahmenNL_Beschreibung
+| `+SZ_Rodungen_V1.Stammdaten.Rodungstyp.Code+` +
+über: `+SZ_Rodungen_V1.Fachdaten.Rodungstyp__Geometrie.rRodungstyp+` m| Objekt_Typ
+| `+SZ_Rodungen_V1.Stammdaten.Massnahme.Code+` +
+über: `+SZ_Rodungen_V1.Fachdaten.Massnahme__Geometrie.rMassnahme+` m| MassnahmenNL_Typ
+| `+SZ_Rodungen_V1.Fachdaten.Geometrie.Massnahmebeschreibung+` m| MassnahmenNL_Beschreibung
 |===
 
 ==== Klasse `+Rodungsbewilligung+`
@@ -201,6 +203,7 @@ Regel: Es werden nur Objekte der Klasse `+Lage+` transferiert, welche `+ist_Schw
 ifdef::backend-pdf[]
 <<<
 endif::[]
+
 
 
 
