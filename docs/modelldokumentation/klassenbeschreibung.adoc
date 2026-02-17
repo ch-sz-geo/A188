@@ -102,59 +102,11 @@ m|Name
 3+| Die Werte müssen eindeutig sein
 |===
 
-
-
-
-
-
-
-
-
-==== Klasse `+Typ+`
-Über den Typ wird die Art der Geometrie festgelegt.
-
-In der Klasse `+Typ+` wurde anfänglich auch der Typ des Wirkbereiches aufgeführt. Weil ein Wirkbereich jedoch stets gleich symbolisiert wird, wurde entschieden, auf diesen Eintrag zu verzichtet.
-[cols=4*,options="header"]
-|===
-| Name | Beschreibung | Beispiel | Freigabe
-m| OID
-| technischer Objektidentifikator
-| ceaa37a9-8614-43fc-9a8b-688f95c30218
-| öffentlich
-m| Code
-| Code des Listeneintrages; entspricht in INTERLIS dem Wert der Aufzählung und muss ein gültiger INTERLIS-Name sein (siehe https://www.interlis.ch/dokumentation[INTERLIS-Referenzhandbuch])
-| ausserhalb_Bauzonen_statisch
-| öffentlich
-m| Name
-| Bezeichnung des Katalogeintrages, wie er den Nutzenden angezeigt wird
-| Waldgrenze ausserhalb Bauzone (statisch)
-| öffentlich
-m| Abkuerzung
-| Kurzform des Katalogeintrages
-| WGraB_s
-| öffentlich
-m| SortierNr
-| Reihenfolge des Katalogeintrages in der Auswahlliste
-| 2
-| öffentlich
-m| Bemerkung
-| Erläuterung, welche den Katalogeintrag näher beschreibt
-| Statische Waldgrenze in Gebieten ausserhalb der Bauzonen, in denen der Kanton eine Zunahme des Waldes verhindern will.
-| öffentlich
-m| Symbol
-| Bild des Legendeneintrages; codiert als Base64-Wert
-| iVBORw0KGg... (gekürzt)
-| öffentlich
-|===
-
-
-
-
 === Topic `+Fachdaten+`
 Das Topic `+Fachdaten+` umfasst die eigentlichen, fachlichen Klassen des Themas.
 
-==== Klasse `+Klasse1+`
-Die Klasse `+Klasse1+` führt .....
+==== Klasse `+Rodungsbewilligung+`
+Die Klasse `+Rodungsbewilligung+` führt die Daten zur Rodungsbewilligung.
 
 [cols=4*,options="header"]
 |===
@@ -179,34 +131,221 @@ m| geaendertAm
 | Datum und Zeit, an dem der Datensatz zuletzt geändert wurde; wird durch das System gesetzt
 | 2024-07-30T08:07:57
 | öffentlich
-m| gueltigVon
-| Datum, an dem das Objekt rechtskräftig wurde bzw. wird. Es gilt der Zeitpunkt mittags um 12:00 Uhr. Das Datum kann sowohl in der Vergangenheit wie auch in der Zukunft liegen.
-| 2024-01-01
+m| Kennung
+| Kantonale Nummer, welche die Rodungsbewilligung eindeutig kennzeichnet.
+| RO-08-01
 | öffentlich
-m| gueltigBis
-| Datum, an dem das Objekt rechtskräftig aufgehoben wurde bzw. wird. Es gilt der Zeitpunkt mittags um 12:00 Uhr. Das Datum kann sowohl in der Vergangenheit wie auch in der Zukunft liegen.
-| 2030-12-31
+m| Kennung_Bund
+| Nummer des Vorhabens, falls die Rodung nach Bundesverfahren läuft.
+| SZ 2318-36
 | öffentlich
-m| Bemerkung
-| öffentliche Bemerkung zum Objekt
-| Das ist eine öffentliche Bemerkung
+m| Beschreibung
+| Name oder Beschreibung des Vorhabens
+| Erschliessung der Abbaukavernen
+| öffentlich
+m| hat_Realersatzpflicht
+| Angabe, ob Realersatz zu leisten ist.
+| ja
+| öffentlich
+m| Rodungsflaeche_def
+| Fläche in m^2, die definitiv geordet wird
+| 1234.00
+| öffentlich
+m| Rodungsflaeche_temp
+| Fläche in m^2, die temporär geordet wird
+| 4321.00
+| öffentlich
+m| Rodungsflaeche_histo
+| Fläche in m^2 früherer Rodungen der letzten 15 Jahre
+| 9876.00
+| öffentlich
+m| Realersatzflaeche
+| Fläche in m^2 des Realersatzes
+| 1212.00
+| öffentlich
+m| Verzichtsflaeche
+| Fläche in m^2, für die auf Rodungsersatz verzichtet wird
+| 50.00
+| öffentlich
+m| Massnahmeflaeche_total
+| Gesamtfläche in m^2, auf der Massnahmen zu Gunsten des Natur- und Landschaftsschutzes zu leisten sind
+| 850.00
+| öffentlich
+m| EA_Flaeche_total
+| Gesamtfläche in m^2, auf der Ersatzaufforstung geleistet wird
+| 125.00
+| öffentlich
+m| EA_Flaeche_gebietsfremd
+| Gesamtfläche in m^2, auf der Ersatzaufforstung in einem anderen Gebiet geleistet wird
+| 215.00
+| öffentlich
+m| Massnahmebeschreibung
+| Beschreibung der Ersatzmassnamen zu Gunsten des Natur- und Landschaftsschutzes
+| eine Beschreibung
+| öffentlich
+m| Massnahmeflaeche_Wald
+| Fläche in m^2 der Natur- und Landschaftsschutzmassnahmen als Ersatz im Waldareal
+| 60.00
+| öffentlich
+m| Massnahmeflaeche_Nichtwald
+| Fläche in m^2 der Natur- und Landschaftsschutzmassnahmen als Ersatz ausserhalb des Waldareals
+| 20.00
+| öffentlich
+m| hat_Massnahmenpool
+| Angabe, ob die Ersatzmassnahmen im Rahmen eines Massnahmenpools realisiert werden
+| ja
+| öffentlich
+m| Massnahmenbemerkung
+| ergänzende Bemerkung zu den Ersatzmassnahmen
+| eine Bemerkung
+| öffentlich
+m| Rodungszweckbemerkung
+| ergänzende Bemerkung zum Rodungszweck
+| eine Bemerkung
+| öffentlich
+m| Rodungsfrist
+| Frist zur Benutzung der Rodungsbewilligung
+| 2028-06-30
+| öffentlich
+m| Fristverlaengerung_RO
+| Frist, bis zu welcher die Rodungsfrist verlängert wird
+| 2028-12-31
+| öffentlich
+m| Rodungsfristbemerkung
+| Bemerkung zur Rodungsfrist
+| Die 90 Tage Rodungsfrist beginnen mit Rechtskraft der Rodungsbewilligung
+| öffentlich
+m| Ersatzfrist
+| Frist zur Erfüllung der Ersatzmassnahmen
+| 2029-12-31
+| öffentlich
+m| Ersatzfristbemerkung
+| Bemerkung zur Ersatzfrist
+| Die Ersatzfrist beginnt mit Rechtskraft der Rodungsbewilligung
+| öffentlich
+m| Fristverlaengerung_EA
+| Frist, bis zu welcher die Ersatzaufforstungt verlängert wird
+| 2031-12-31
+| öffentlich
+m| hat_Finanzausgleich
+| finanzieller Ausgleich im Fall von erheblichen Vorteilen
+| nein
+| öffentlich
+m| Abschlussdatum
+| Datum, an dem das Vorhaben inkl. der Ersatzmassnahmen abgeschlossen ist
+| 2025-04-15
+| öffentlich
+m| Verfuegungsdatum
+| Datum der Verfügung
+| 2015-03-03
+| öffentlich
+m| Referenz
+| Andere Rodungsvorhaben, die mit diesem Dossier verbunden sind, sowie weitere Referenzen
+| RO-99-75, RO-99-76, RO-99-77
+| öffentlich
+m| Erfassungsdatum_GIS
+| Datum, an dem die Rodungsgeometrie erfasst wurde
+| 2018-02-19
+| öffentlich
+m| Baugesuchsnummer
+| Referenz zum Baugesuch
+| PB-22-005
 | öffentlich
 m| Bemerkung_intern
-| Erläuterung, welche den Katalogeintrag näher beschreibt
-| Dieser Status wird für alle Objekte verwendet, bei denen aktuell eine Nachführung läuft.
-| +++<span style="color:red;">amtsintern</span>+++
+| interne Bemerkung
+| Das ist eine interne Bemerkung.
+| +++<span style="color:red;">intern</span>+++
+m| Bemerkung
+| Bemerkung
+| Das ist eine Bemerkung.
+| öffentlich
+4+| *Beziehungsattribute*
+m| rErsatzmassnahmeart
+| Fremdschlüssel zur Ersatzmassnahmeart (Stammdaten)
+| ccee2bad-419e-454e-9e0f-9ef2ae2d4d44
+| öffentlich
+m| rVerzichtsgrund
+| Fremdschlüssel zum Verzichtsgrund (Stammdaten)
+| ccee2bad-419e-454e-9e0f-9ef2ae2d4d44
+| öffentlich
+m| rZustaendigkeit
+| Fremdschlüssel zur Zustaendigkeit (Stammdaten)
+| ccee2bad-419e-454e-9e0f-9ef2ae2d4d44
+| öffentlich
+m| rMassnahme
+| Fremdschlüssel zur Massnahme (Stammdaten)
+| ccee2bad-419e-454e-9e0f-9ef2ae2d4d44
+| öffentlich
+m| rRodungszweck
+| Fremdschlüssel zum Rodungszweck (Stammdaten)
+| ccee2bad-419e-454e-9e0f-9ef2ae2d4d44
+| öffentlich
+m| rRodungsstand
+| Fremdschlüssel zum Rodungsstand (Stammdaten)
+| ccee2bad-419e-454e-9e0f-9ef2ae2d4d44
+| öffentlich
+m| rGemeinde
+| Fremdschlüssel zur Gemeinde (Stammdaten)
+| ccee2bad-419e-454e-9e0f-9ef2ae2d4d44
+| öffentlich
 4+| *Geometrie*
-m| Geometrie
-| Geometrie des Objektes
-| (ohne Beispiel)
+4+| - - -
+4+| *Bedingungen*
+m|Kennung
+3+a| * Die Werte müssen innerhalb der Klasse eindeutig sein.
+* Nach der Vergabe muss der Wert unverändert bleiben.
+m|rGemeinde
+3+a| * Die erste Gemeinde ist die führende. Ihr soll das Beziehungsattribut `+ist_fuehrend+` auf TRUE gesetzt werden; bei den anderen auf FALSE.
+|===
+
+
+==== Klasse `+Geometrie+`
+Die Klasse `+Geometrie+` enthält die allgemeinen, für alle geometrischen Klassen gemeinsamen Attribute. Die Klasse selber ist abstrakt: Es gibt keine Objekte +Geometrieg+, sondern nur Objekte von den spezialisierten Klassen.
+
+[cols=4*,options="header"]
+|===
+| Name | Beschreibung | Beispiel | Freigabe
+m| OID
+| technischer Objektidentifikator
+| ceaa37a9-8614-43fc-9a8b-688f95c30218
+| öffentlich
+m| erfasstVon
+| Loginname der Person, welche den Datensatz erstellt hat (Autor); wird durch das System gesetzt
+| Musterha
+| +++<span style="color:red;">intern</span>+++
+m| erfasstAm
+| Datum und Zeit, an dem der Datensatz erstellt wurde; wird durch das System gesetzt
+| 1980-03-21T15:38:12
+| öffentlich
+m| geaendertVon
+| Loginname der Person, welche den Datensatz zuletzt geändert hat (Editor); wird durch das System gesetzt
+| Muelleran
+| +++<span style="color:red;">intern</span>+++
+m| geaendertAm
+| Datum und Zeit, an dem der Datensatz zuletzt geändert wurde; wird durch das System gesetzt
+| 2024-07-30T08:07:57
+| öffentlich
+m| Massnahmebeschreibung
+| Beschreibung der Ersatzmassnahme zu Gunsten des Natur- und Landschaftsschutzes
+| Renaturierung alter Steinbruch
+| öffentlich
+m| Bemerkung
+| Bemerkung
+| Das ist eine Bemerkung.
+| öffentlich
+4+| *Beziehungsattribute*
+m| rRodungstyp
+| Fremdschlüssel zum Rodungstyp (Stammdaten)
+| ccee2bad-419e-454e-9e0f-9ef2ae2d4d44
+| öffentlich
+m| rMassnahme
+| Fremdschlüssel zur Massnahme (Stammdaten)
+| ccee2bad-419e-454e-9e0f-9ef2ae2d4d44
 | öffentlich
 |===
 
 
-[%header, cols="10%, 10%, 10%, 60%, 10%", format=csv, separator=;]
-|=======
-include::../table/klasse_katalogeintrag.csv[]
-|=======
+
 
 ifdef::backend-pdf[]
 <<<
