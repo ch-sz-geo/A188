@@ -103,11 +103,11 @@ Verzicht, da alle Rodungen geometrisch erfasst werden. m| Schwerpunkt
 | `+SZ_Verfahren_Waldrecht_V1.Fachdaten.Rodungsbewilligung.Beschreibung+` m| Vorhaben
 | `+SZ_Verfahren_Waldrecht_V1.Fachdaten.Rodungsbewilligung.hat_Realersatzpflicht+` m| Ersatz_Real
 | `+SZ_Rodungen_V1.Stammdaten.Ersatzmassnahmeart.Code+` +
-über `+SZ_Rodungen_V1.Fachdaten.Ersatzmassnahmeart__Rodungsbewilligung.rErsatzmassnahmeart+` m| Ersatz_MassnahmenNL
+über: `+SZ_Rodungen_V1.Fachdaten.Ersatzmassnahmeart__Rodungsbewilligung.rErsatzmassnahmeart+` m| Ersatz_MassnahmenNL
 | `+SZ_Rodungen_V1.Stammdaten.Verzichtsgrund.Code+` +
-über `+SZ_Rodungen_V1.Fachdaten.Verzichtsgrund__Rodungsbewilligung.rVerzichtsgrund+` m| Ersatz_Verzicht
+über: `+SZ_Rodungen_V1.Fachdaten.Verzichtsgrund__Rodungsbewilligung.rVerzichtsgrund+` m| Ersatz_Verzicht
 | `+SZ_Rodungen_V1.Stammdaten.Zustaendigkeit.Code+` +
-über `+SZ_Rodungen_V1.Fachdaten.Zustaendigkeit__Rodungsbewilligung.rZustaendigkeit+` m| Zustaendigkeit
+über: `+SZ_Rodungen_V1.Fachdaten.Zustaendigkeit__Rodungsbewilligung.rZustaendigkeit+` m| Zustaendigkeit
 | `+SZ_Rodungen_V1.Fachdaten.Rodungsbewilligung.Rodungsflaeche_def+` m| Flaeche_Rodung_def
 | `+SZ_Rodungen_V1.Fachdaten.Rodungsbewilligung.Rodungsflaeche_temp+` m| Flaeche_Rodung_temp
 | `+SZ_Rodungen_V1.Fachdaten.Rodungsbewilligung.Rodungsflaeche_histo+` m| Flaeche_Fruehere_Rodung15Jahre
@@ -115,7 +115,7 @@ Verzicht, da alle Rodungen geometrisch erfasst werden. m| Schwerpunkt
 | `+SZ_Rodungen_V1.Fachdaten.Rodungsbewilligung.Verzichtsflaeche+` m| Flaeche_Ersatz_Verzicht
 | `+SZ_Rodungen_V1.Fachdaten.Rodungsbewilligung.Massnahmeflaeche_total+` m| Flaeche_Ersatz_MassnahmenNL
 | `+SZ_Rodungen_V1.Stammdaten.Massnahme.Code+` +
-über `+SZ_Rodungen_V1.Fachdaten.Massnahme__Rodungsbewilligung.rMassnahme+` m| MassnahmeNL_Typ
+über: `+SZ_Rodungen_V1.Fachdaten.Massnahme__Rodungsbewilligung.rMassnahme+` m| MassnahmeNL_Typ
 | `+SZ_Rodungen_V1.Fachdaten.Rodungsbewilligung.Massnahmenbeschreibung+` m| MassnahmenNL_Beschreibung
 | `+SZ_Rodungen_V1.Fachdaten.Rodungsbewilligung.Massnahmeflaeche_Wald+` m| FlaecheMassnahmeNL_ImWaldareal
 | `+SZ_Rodungen_V1.Fachdaten.Rodungsbewilligung.Massnahmeflaeche_Nichtwald+` m| FlaecheMassnahmeNL_AusserhalbWaldareal
@@ -129,7 +129,7 @@ Verzicht, da alle Rodungen geometrisch erfasst werden. m| Schwerpunkt
 | `+SZ_Rodungen_V1.Fachdaten.Rodungsbewilligung.Ersatzfristbemerkung+` m| Frist_Ersatz_Bemerkung
 | `+SZ_Rodungen_V1.Fachdaten.Rodungsbewilligung.hat_Finanzausgleich+` m| Ausgleich
 | `+SZ_Rodungen_V1.Stammdaten.Rodungsstand.Code+` +
-über `+SZ_Rodungen_V1.Fachdaten.Rodungsstand__Rodungsbewilligung.rRodungsstand+` m| Stand_Abgeschlossen
+über: `+SZ_Rodungen_V1.Fachdaten.Rodungsstand__Rodungsbewilligung.rRodungsstand+` m| Stand_Abgeschlossen
 | `+SZ_Verfahren_Waldrecht_V1.Fachdaten.Rodungsbewilligung.Abschlussdatum+` m| Datum_Abgeschlossen
 | `+SZ_Verfahren_Waldrecht_V1.Fachdaten.Rodungsbewilligung.Verfuegungsdatum+` m| Verfuegung_Datum
 | todo: klären, ob zu streichen m| Verfuegung_URL
@@ -139,7 +139,7 @@ Regel: Ableiten der Punkt-Koordinate, falls `+ist_Schwerpunkt+` = TRUE m| Schwer
 | `+SZ_Verfahren_Waldrecht_V1.Fachdaten.Lage.Geometrie+` +
 und/oder +
 `+SZ_Verfahren_Waldrecht_V1.Fachdaten.Flaeche.Geometrie+` +
-Regel: Es werden nur Objekte der Klasse `+Lage+` transferiert, welche `+ist_Schwerpunkt+` = FALSE aufweisen m| Objekte
+Regel: Es werden nur Objekte der Klasse `+Lage+` transferiert, welche `+ist_Schwerpunkt+` = FALSE aufweisen. m| Objekte
 |===
 
 ==== Klasse `+ErsatzMassnahmenNLBeschreibung+`
@@ -201,6 +201,7 @@ Regel: Es werden nur Objekte der Klasse `+Lage+` transferiert, welche `+ist_Schw
 ifdef::backend-pdf[]
 <<<
 endif::[]
+
 
 
 
