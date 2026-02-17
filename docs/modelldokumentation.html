@@ -1257,149 +1257,144 @@ Verzicht, da alle Rodungen geometrisch erfasst werden.</p></td>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SZ_Verfahren_Waldrecht_V1.Fachdaten.Rodung.Kennung</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SZ_Verfahren_Waldrecht_V1.Fachdaten.Rodungsbewilligung.Kennung</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Nr_Kanton</code></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SZ_Verfahren_Waldrecht_V1.Fachdaten.Rodung.Kennung_Bund</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SZ_Verfahren_Waldrecht_V1.Fachdaten.Rodungsbewilligung.Kennung_Bund</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Nr_Bund</code></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SZ_Verfahren_Waldrecht_V1.Fachdaten.Rodung.Name</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SZ_Verfahren_Waldrecht_V1.Fachdaten.Rodungsbewilligung.Beschreibung</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Vorhaben</code></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SZ_Rodungen_V1.Fachdaten.Geometrie.ist_Realersatz</code><br>
-Regel: falls eine der zugewiesenen Geometrien TRUE aufweist, wird TRUE gesetzt; andernfalls FALSE</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SZ_Verfahren_Waldrecht_V1.Fachdaten.Rodungsbewilligung.hat_Realersatzpflicht</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Ersatz_Real</code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>SZ_Rodungen_V1.Stammdaten.Ersatzmassnahmeart.Code</code><br>
-über <code>SZ_Rodungen_V1.Fachdaten.Geometrie.rErsatzmassnahmeart</code><br>
-Regel: BAG wird gebildet über alle Ersatzmassnahmearten der zugeordneten Geometrien</p></td>
+über <code>SZ_Rodungen_V1.Fachdaten.Ersatzmassnahmeart__Rodungsbewilligung.rErsatzmassnahmeart</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Ersatz_MassnahmenNL</code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>SZ_Rodungen_V1.Stammdaten.Verzichtsgrund.Code</code><br>
-über <code>SZ_Rodungen_V1.Fachdaten.Geometrie.rVerzichtsgrund</code><br>
-Regel: BAG wird gebildet über alle Verzichtsgründe der zugeordneten Geometrien</p></td>
+über <code>SZ_Rodungen_V1.Fachdaten.Verzichtsgrund__Rodungsbewilligung.rVerzichtsgrund</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Ersatz_Verzicht</code></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SZ_Rodungen_V1.Stammdaten.Zustaendigkeit.Code</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SZ_Rodungen_V1.Stammdaten.Zustaendigkeit.Code</code><br>
+über <code>SZ_Rodungen_V1.Fachdaten.Zustaendigkeit__Rodungsbewilligung.rZustaendigkeit</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Zustaendigkeit</code></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SZ_Rodungen_V1.Fachdaten.Rodung.Rodungsflaeche_def</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SZ_Rodungen_V1.Fachdaten.Rodungsbewilligung.Rodungsflaeche_def</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Flaeche_Rodung_def</code></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SZ_Rodungen_V1.Fachdaten.Rodung.Rodungsflaeche_temp</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SZ_Rodungen_V1.Fachdaten.Rodungsbewilligung.Rodungsflaeche_temp</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Flaeche_Rodung_temp</code></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SZ_Rodungen_V1.Fachdaten.Rodung.Rodungsflaeche_histo</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SZ_Rodungen_V1.Fachdaten.Rodungsbewilligung.Rodungsflaeche_histo</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Flaeche_Fruehere_Rodung15Jahre</code></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SZ_Rodungen_V1.Fachdaten.Rodung.Realersatzflaeche</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SZ_Rodungen_V1.Fachdaten.Rodungsbewilligung.Realersatzflaeche</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Flaeche_Ersatz_Real</code></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SZ_Rodungen_V1.Fachdaten.Rodung.Verzichtsflaeche</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SZ_Rodungen_V1.Fachdaten.Rodungsbewilligung.Verzichtsflaeche</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Flaeche_Ersatz_Verzicht</code></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SZ_Rodungen_V1.Fachdaten.Rodung.Massnahmeflaeche_total</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SZ_Rodungen_V1.Fachdaten.Rodungsbewilligung.Massnahmeflaeche_total</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Flaeche_Ersatz_MassnahmenNL</code></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">über Stammdaten lösen</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>MassnahmenNL_Typ</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SZ_Rodungen_V1.Stammdaten.Massnahme.Code</code><br>
+über <code>SZ_Rodungen_V1.Fachdaten.Massnahme__Rodungsbewilligung.rMassnahme</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>MassnahmeNL_Typ</code></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SZ_Rodungen_V1.Fachdaten.Rodung.Massnahmenbeschreibung</code><br>
-Achtung: MTEXT; Zeilenumbrüche sind mit einem Leerschlag zu ersetzen</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SZ_Rodungen_V1.Fachdaten.Rodungsbewilligung.Massnahmenbeschreibung</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>MassnahmenNL_Beschreibung</code></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SZ_Rodungen_V1.Fachdaten.Rodung.Massnahmeflaeche_Wald</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SZ_Rodungen_V1.Fachdaten.Rodungsbewilligung.Massnahmeflaeche_Wald</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>FlaecheMassnahmeNL_ImWaldareal</code></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SZ_Rodungen_V1.Fachdaten.Rodung.Massnahmeflaeche_Nichtwald</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SZ_Rodungen_V1.Fachdaten.Rodungsbewilligung.Massnahmeflaeche_Nichtwald</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>FlaecheMassnahmeNL_AusserhalbWaldareal</code></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SZ_Rodungen_V1.Fachdaten.Rodung.hat_Massnahmenpool</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SZ_Rodungen_V1.Fachdaten.Rodungsbewilligung.hat_Massnahmenpool</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>MassnahmeNL_Pool</code></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SZ_Rodungen_V1.Fachdaten.Rodung.Massnahmenbemerkung</code><br>
-Achtung: MTEXT; Zeilenumbrüche sind mit einem Leerschlag zu ersetzen</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SZ_Rodungen_V1.Fachdaten.Rodungsbewilligung.Massnahmenbemerkung</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Massnahme_WeitereBemerkungen</code></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SZ_Rodungen_V1.Fachdaten.Rodung.rRodungszweck</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SZ_Rodungen_V1.Fachdaten.Rodungsbewilligung.rRodungszweck</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Rodungszweck</code></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SZ_Rodungen_V1.Fachdaten.Rodung.Rodungszweckbemerkung</code><br>
-Achtung: MTEXT; Zeilenumbrüche sind mit einem Leerschlag zu ersetzen</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SZ_Rodungen_V1.Fachdaten.Rodungsbewilligung.Rodungszweckbemerkung</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Rodungszweck_Bemerkungen</code></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SZ_Rodungen_V1.Fachdaten.Rodung.Rodungsfrist</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SZ_Rodungen_V1.Fachdaten.Rodungsbewilligung.Rodungsfrist</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Frist_Rodung</code></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SZ_Rodungen_V1.Fachdaten.Rodung.Rodungsfristbemerkung</code><br>
-Achtung: MTEXT; Zeilenumbrüche sind mit einem Leerschlag zu ersetzen</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SZ_Rodungen_V1.Fachdaten.Rodungsbewilligung.Rodungsfristbemerkung</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Frist_Rodung_Bemerkung</code></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SZ_Rodungen_V1.Fachdaten.Rodung.Ersatzfrist</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SZ_Rodungen_V1.Fachdaten.Rodungsbewilligung.Ersatzfrist</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Frist_Ersatz</code></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SZ_Rodungen_V1.Fachdaten.Rodung.Ersatzfristbemerkung</code><br>
-Achtung: MTEXT; Zeilenumbrüche sind mit einem Leerschlag zu ersetzen</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SZ_Rodungen_V1.Fachdaten.Rodungsbewilligung.Ersatzfristbemerkung</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Frist_Ersatz_Bemerkung</code></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SZ_Rodungen_V1.Fachdaten.Rodung.hat_Ausgleich</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SZ_Rodungen_V1.Fachdaten.Rodungsbewilligung.hat_Finanzausgleich</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Ausgleich</code></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">todo<br>
-Soll über den Verfahrensstatus realisiert werden</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SZ_Rodungen_V1.Stammdaten.Rodungsstand.Code</code><br>
+über <code>SZ_Rodungen_V1.Fachdaten.Rodungsstand__Rodungsbewilligung.rRodungsstand</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Stand_Abgeschlossen</code></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SZ_Verfahren_Waldrecht_V1.Fachdaten.Rodung.Abschlussdatum</code><br>
-todo: Abhängigkeit zu <code>Stand_Abgeschlossen</code> beachten</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SZ_Verfahren_Waldrecht_V1.Fachdaten.Rodungsbewilligung.Abschlussdatum</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Datum_Abgeschlossen</code></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SZ_Verfahren_Waldrecht_V1.Fachdaten.Verfahren.Verfuegungsdatum</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SZ_Verfahren_Waldrecht_V1.Fachdaten.Rodungsbewilligung.Verfuegungsdatum</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Verfuegung_Datum</code></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SZ_Verfahren_Waldrecht_V1.Fachdaten.Verfahren.Verfuegungslink</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">todo: klären, ob zu streichen</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Verfuegung_URL</code></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SZ_Verfahren_Waldrecht_V1.Fachdaten.Rodung.Referenz</code><br>
-Achtung: MTEXT; Zeilenumbrüche sind mit einem Leerschlag zu ersetzen</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SZ_Verfahren_Waldrecht_V1.Fachdaten.Rodungsbewilligung.Referenz</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Weitere_Referenzen</code></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">- - -<br>
-Verzicht, da alle Rodungen geometrisch erfasst werden.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SZ_Verfahren_Waldrecht_V1.Fachdaten.Lage.Geometrie</code><br>
+Regel: Ableiten der Punkt-Koordinate, falls <code>ist_Schwerpunkt</code> = TRUE</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Schwerpunkt</code></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">todo</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SZ_Verfahren_Waldrecht_V1.Fachdaten.Lage.Geometrie</code><br>
+und/oder<br>
+<code>SZ_Verfahren_Waldrecht_V1.Fachdaten.Flaeche.Geometrie</code><br>
+Regel: Es werden nur Objekte der Klasse <code>Lage</code> transferiert, welche <code>ist_Schwerpunkt</code> = FALSE aufweisen</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Objekte</code></p></td>
 </tr>
 </tbody>
@@ -1586,7 +1581,7 @@ Verzicht, da alle Rodungen geometrisch erfasst werden.</p></td>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-02-17 08:11:44 UTC
+Last updated 2026-02-17 11:12:56 UTC
 </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>
