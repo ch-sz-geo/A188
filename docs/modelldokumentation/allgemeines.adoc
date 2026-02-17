@@ -9,9 +9,7 @@ Dieses Dokument beschreibt den Geobasisdatensatz
  
 * *__Rodungen und Rodungsersatz__.* +
 
-__<weitere Beschreibungen>__ +
-
-Der Geobasisdatensatz ist Bestandteil des ÖREB-Katasters. +
+Die Daten eines Rodungsgeschäfts werden erst mit Rechtskraft des Rodungsgesuch erfasst; also nach Ablauf der Beschwerderist der entsprechenden Rodungsbewilligung. Damit entfallen Informationen zum Verfahren.
 
 === Zielgruppen
 Dieses Dokument richtet sich an folgende Nutzergruppen:
