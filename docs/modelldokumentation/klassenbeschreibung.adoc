@@ -34,20 +34,20 @@ m| Bemerkung
 | öffentlich
 |===
 
-Die Katalogeinträge sind durch das Bundesamt vorgegeben und im Bundesmodell als Codes definiert. Die Sprachübersetzung erfolgt über die XML-Datei http://models.geo.admin.ch/BAFU/Rodungen_Codetexte_V1_1.xml[Rodungen_Codetexte_V1_1.xml]. Diese Daten bilden die Grundlage für die Übernahme in die kantonalen Stammdaten. Es gilt folgende Zuorndung:
+Die Katalogeinträge sind durch das Bundesamt vorgegeben und über die Datei http://models.geo.admin.ch/BAFU/Rodungen_Codetexte_V1_1.xml[Rodungen_Codetexte_V1_1.xml] publiziert. Diese Daten bilden die Grundlage für die Übernahme in die kantonalen Stammdaten. Es gilt folgende Zuorndung:
 
 [cols=2*,options="header"]
 |===
 | Kanton | Bund
 m| OID | wird einmalig vergeben
-m| Code | entspricht der TID des XMLs bzw. dem Wert der Aufzählung im Modell
+m| Code | entspricht dem Attribut `+Typ+` des XMLs bzw. dem Wert der Aufzählung im Modell
 m| Name | deutscher Text gemäss XML (optimiert für GUI)
 m| SortierNr | aufsteigende Zahl entsprechend der Reihenfolge im XML
 m| Bemerkung | deutscher Text gemäss XML (unverändert!)
 |===
 
-==== Klasse `+Typ+`
-Die Klasse `+Typ+` bezeichnet die Bedeutung der Rodungsgeometrie. Sie beinhaltet die Aufzählung "ObjektTyp" gemäss Bundesmodell.
+==== Klasse `+Rodungstyp+`
+Die Klasse `+Rodungstyp+` bezeichnet die Bedeutung der Rodungsgeometrie. Sie beinhaltet die Aufzählung "ObjektTyp" gemäss Bundesmodell.
 
 [cols=4*,options="header"]
 |===
@@ -77,6 +77,38 @@ m|Name
 ==== Klasse `+Ersatzmassnahmeart+`
 Die Klasse `+Ersatzmassnahmeart+` beinhaltet die Massnahmen, welche als Rodungsersatz getroffen werden. Die Ersatzmassnahmen entsprechen im Bundesmodell der Aufzählung `+ErsatzMassnahmenNL+`. Weil es nur Ersatzmassnahmen zu Gunsten des Natur- und Landschaftsschutzes gibt, werden alle Massnahmen in die gleiche Klasse eingetragen und auf das Suffix "NL" (vgl. Bundesmodell) verzichtet.
 
+todo: Boolean mit abhängigem Wert; Boolean: "hat_Realersatz"
+
+[cols=4*,options="header"]
+|===
+| Name | Beschreibung | Beispiel | Freigabe
+4+| _Diese Klasse führt keine zusätzlichen Attribute_
+4+| *Anforderungen*
+m|Code
+3+| Die Werte müssen eindeutig sein
+m|Name
+3+| Die Werte müssen eindeutig sein
+|===
+
+==== Klasse `+Verzichtsgrund+`
+Die Klasse `+Verzichtsgrund+` beinhaltet Gründe, weshalb auf einen Realersatz verzichtet wird. Die Werte entsprechen im Bundesmodell der Aufzählung `+ErsatzVerzicht+`.
+
+[cols=4*,options="header"]
+|===
+| Name | Beschreibung | Beispiel | Freigabe
+4+| _Diese Klasse führt keine zusätzlichen Attribute_
+4+| *Anforderungen*
+m|Code
+3+| Die Werte müssen eindeutig sein
+m|Name
+3+| Die Werte müssen eindeutig sein
+|===
+
+todo: Boolean mit abhängigem Wert; Boolean: "hat_Ersatzverzicht"
+
+==== Klasse `+Zustaendigkeit+`
+Die Klasse `+Zustaendigkeit+` beinhaltet die Staatsebene, welcher für die Rodung zuständig ist. Die Werte entsprechen im Bundesmodell der Aufzählung `+ZustaendigkeitsTyp+`.
+
 [cols=4*,options="header"]
 |===
 | Name | Beschreibung | Beispiel | Freigabe
@@ -102,11 +134,57 @@ m|Name
 3+| Die Werte müssen eindeutig sein
 |===
 
+==== Klasse `+Rodungsstand+`
+Die Klasse `+Rodungsstand+` beinhaltet die Werte über den Stand der Rodung bzw. den Stand der Ersatzmassnahmen. Die Werte entsprecht im Bundesmodell der Aufzählung `+StandTyp+`.
+
+[cols=4*,options="header"]
+|===
+| Name | Beschreibung | Beispiel | Freigabe
+4+| _Diese Klasse führt keine zusätzlichen Attribute_
+4+| *Anforderungen*
+m|Code
+3+| Die Werte müssen eindeutig sein
+m|Name
+3+| Die Werte müssen eindeutig sein
+|===
+
+==== Klasse `+Gemeinde+`
+Die Klasse `+Gemeinde+` führte die schwyzer Gemeinden. Dieser Katalog ist eine kantonale Erweiterung.
+
+[cols=4*,options="header"]
+|===
+| Name | Beschreibung | Beispiel | Freigabe
+4+| _Diese Klasse führt keine zusätzlichen Attribute_
+4+| *Anforderungen*
+m|Code
+3+| Die Werte müssen eindeutig sein
+m|Name
+3+| Die Werte müssen eindeutig sein
+|===
+
+==== Klasse `+Genauigkeit+`
+Die Klasse `+Genauigkeit+` führte Angaben über die Genauigkeit der Geometrien. Dieser Katalog ist eine kantonale Erweiterung.
+
+[cols=4*,options="header"]
+|===
+| Name | Beschreibung | Beispiel | Freigabe
+4+| _Diese Klasse führt keine zusätzlichen Attribute_
+4+| *Anforderungen*
+m|Code
+3+| Die Werte müssen eindeutig sein
+m|Name
+3+| Die Werte müssen eindeutig sein
+|===
+
+todo: Werte in Masterkatalog erfassen:  (geometergenau, GPS-Einmessung, Daten vom Planer, digitalisiert mit Planscan, abgezeichnet, von AWN festgelgt)
+
 === Topic `+Fachdaten+`
 Das Topic `+Fachdaten+` umfasst die eigentlichen, fachlichen Klassen des Themas.
 
 ==== Klasse `+Rodungsbewilligung+`
 Die Klasse `+Rodungsbewilligung+` führt die Daten zur Rodungsbewilligung.
+
+todo: Klaren, ob die fakultativen Attribute geführt werden müssen.
 
 [cols=4*,options="header"]
 |===
