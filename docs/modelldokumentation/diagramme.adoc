@@ -1,9 +1,9 @@
 == Diagramme
 === Komponentendiagramm
-image::../img/Komponentendiagramm.jpg[]
+image::../img/SZ_Rodungen_V1_Komponentendiagramm.png[]
 
 === Klassendiagramm
-image::../img/Klassendiagramm.jpg[]
+image::../img/SZ_Rodungen_V1_Klassendiagramm.png[]
 
 ifdef::backend-pdf[]
 <<<
