@@ -211,10 +211,15 @@ th {
 <li><a href="#_topic_stammdaten">4.1. Topic <code>Stammdaten</code></a>
 <ul class="sectlevel3">
 <li><a href="#_klasse_katalogeintrag">4.1.1. Klasse <code>Katalogeintrag</code></a></li>
-<li><a href="#_klasse_typ">4.1.2. Klasse <code>Typ</code></a></li>
+<li><a href="#_klasse_rodungstyp">4.1.2. Klasse <code>Rodungstyp</code></a></li>
 <li><a href="#_klasse_massnahme">4.1.3. Klasse <code>Massnahme</code></a></li>
 <li><a href="#_klasse_ersatzmassnahmeart">4.1.4. Klasse <code>Ersatzmassnahmeart</code></a></li>
-<li><a href="#_klasse_rodungszweck">4.1.5. Klasse <code>Rodungszweck</code></a></li>
+<li><a href="#_klasse_verzichtsgrund">4.1.5. Klasse <code>Verzichtsgrund</code></a></li>
+<li><a href="#_klasse_zustaendigkeit">4.1.6. Klasse <code>Zustaendigkeit</code></a></li>
+<li><a href="#_klasse_rodungszweck">4.1.7. Klasse <code>Rodungszweck</code></a></li>
+<li><a href="#_klasse_rodungsstand">4.1.8. Klasse <code>Rodungsstand</code></a></li>
+<li><a href="#_klasse_gemeinde">4.1.9. Klasse <code>Gemeinde</code></a></li>
+<li><a href="#_klasse_genauigkeit">4.1.10. Klasse <code>Genauigkeit</code></a></li>
 </ul>
 </li>
 <li><a href="#_topic_fachdaten">4.2. Topic <code>Fachdaten</code></a>
@@ -286,7 +291,7 @@ th {
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">letzte Änderung</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2026-02-17</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2026-02-18</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Themen-Nummer</p></td>
@@ -544,7 +549,7 @@ Christoph Angst (ChA), AWN</p></td>
 </tbody>
 </table>
 <div class="paragraph">
-<p>Die Katalogeinträge sind durch das Bundesamt vorgegeben und im Bundesmodell als Codes definiert. Die Sprachübersetzung erfolgt über die XML-Datei <a href="http://models.geo.admin.ch/BAFU/Rodungen_Codetexte_V1_1.xml">Rodungen_Codetexte_V1_1.xml</a>. Diese Daten bilden die Grundlage für die Übernahme in die kantonalen Stammdaten. Es gilt folgende Zuorndung:</p>
+<p>Die Katalogeinträge sind durch das Bundesamt vorgegeben und über die Datei <a href="http://models.geo.admin.ch/BAFU/Rodungen_Codetexte_V1_1.xml">Rodungen_Codetexte_V1_1.xml</a> publiziert. Diese Daten bilden die Grundlage für die Übernahme in die kantonalen Stammdaten. Es gilt folgende Zuorndung:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -564,7 +569,7 @@ Christoph Angst (ChA), AWN</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Code</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">entspricht der TID des XMLs bzw. dem Wert der Aufzählung im Modell</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">entspricht dem Attribut <code>Typ</code> des XMLs bzw. dem Wert der Aufzählung im Modell</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Name</code></p></td>
@@ -582,9 +587,9 @@ Christoph Angst (ChA), AWN</p></td>
 </table>
 </div>
 <div class="sect3">
-<h4 id="_klasse_typ"><a class="anchor" href="#_klasse_typ"></a><a class="link" href="#_klasse_typ">4.1.2. Klasse <code>Typ</code></a></h4>
+<h4 id="_klasse_rodungstyp"><a class="anchor" href="#_klasse_rodungstyp"></a><a class="link" href="#_klasse_rodungstyp">4.1.2. Klasse <code>Rodungstyp</code></a></h4>
 <div class="paragraph">
-<p>Die Klasse <code>Typ</code> bezeichnet die Bedeutung der Rodungsgeometrie. Sie beinhaltet die Aufzählung "ObjektTyp" gemäss Bundesmodell.</p>
+<p>Die Klasse <code>Rodungstyp</code> bezeichnet die Bedeutung der Rodungsgeometrie. Sie beinhaltet die Aufzählung "ObjektTyp" gemäss Bundesmodell.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -662,6 +667,9 @@ Christoph Angst (ChA), AWN</p></td>
 <div class="paragraph">
 <p>Die Klasse <code>Ersatzmassnahmeart</code> beinhaltet die Massnahmen, welche als Rodungsersatz getroffen werden. Die Ersatzmassnahmen entsprechen im Bundesmodell der Aufzählung <code>ErsatzMassnahmenNL</code>. Weil es nur Ersatzmassnahmen zu Gunsten des Natur- und Landschaftsschutzes gibt, werden alle Massnahmen in die gleiche Klasse eingetragen und auf das Suffix "NL" (vgl. Bundesmodell) verzichtet.</p>
 </div>
+<div class="paragraph">
+<p>todo: Boolean mit abhängigem Wert; Boolean: "hat_Realersatz"</p>
+</div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 25%;">
@@ -696,7 +704,86 @@ Christoph Angst (ChA), AWN</p></td>
 </table>
 </div>
 <div class="sect3">
-<h4 id="_klasse_rodungszweck"><a class="anchor" href="#_klasse_rodungszweck"></a><a class="link" href="#_klasse_rodungszweck">4.1.5. Klasse <code>Rodungszweck</code></a></h4>
+<h4 id="_klasse_verzichtsgrund"><a class="anchor" href="#_klasse_verzichtsgrund"></a><a class="link" href="#_klasse_verzichtsgrund">4.1.5. Klasse <code>Verzichtsgrund</code></a></h4>
+<div class="paragraph">
+<p>Die Klasse <code>Verzichtsgrund</code> beinhaltet Gründe, weshalb auf einen Realersatz verzichtet wird. Die Werte entsprechen im Bundesmodell der Aufzählung <code>ErsatzVerzicht</code>.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Beschreibung</th>
+<th class="tableblock halign-left valign-top">Beispiel</th>
+<th class="tableblock halign-left valign-top">Freigabe</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock"><em>Diese Klasse führt keine zusätzlichen Attribute</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock"><strong>Anforderungen</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Code</code></p></td>
+<td class="tableblock halign-left valign-top" colspan="3"><p class="tableblock">Die Werte müssen eindeutig sein</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Name</code></p></td>
+<td class="tableblock halign-left valign-top" colspan="3"><p class="tableblock">Die Werte müssen eindeutig sein</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>todo: Boolean mit abhängigem Wert; Boolean: "hat_Ersatzverzicht"</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_klasse_zustaendigkeit"><a class="anchor" href="#_klasse_zustaendigkeit"></a><a class="link" href="#_klasse_zustaendigkeit">4.1.6. Klasse <code>Zustaendigkeit</code></a></h4>
+<div class="paragraph">
+<p>Die Klasse <code>Zustaendigkeit</code> beinhaltet die Staatsebene, welcher für die Rodung zuständig ist. Die Werte entsprechen im Bundesmodell der Aufzählung <code>ZustaendigkeitsTyp</code>.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Beschreibung</th>
+<th class="tableblock halign-left valign-top">Beispiel</th>
+<th class="tableblock halign-left valign-top">Freigabe</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock"><em>Diese Klasse führt keine zusätzlichen Attribute</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock"><strong>Anforderungen</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Code</code></p></td>
+<td class="tableblock halign-left valign-top" colspan="3"><p class="tableblock">Die Werte müssen eindeutig sein</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Name</code></p></td>
+<td class="tableblock halign-left valign-top" colspan="3"><p class="tableblock">Die Werte müssen eindeutig sein</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_klasse_rodungszweck"><a class="anchor" href="#_klasse_rodungszweck"></a><a class="link" href="#_klasse_rodungszweck">4.1.7. Klasse <code>Rodungszweck</code></a></h4>
 <div class="paragraph">
 <p>Die Klasse <code>Rodungszweck</code> beinhaltet die Werte zum Rodungszweck und entsprecht im Bundesmodell der Aufzählung <code>RodungszweckTyp</code>.</p>
 </div>
@@ -733,6 +820,123 @@ Christoph Angst (ChA), AWN</p></td>
 </tbody>
 </table>
 </div>
+<div class="sect3">
+<h4 id="_klasse_rodungsstand"><a class="anchor" href="#_klasse_rodungsstand"></a><a class="link" href="#_klasse_rodungsstand">4.1.8. Klasse <code>Rodungsstand</code></a></h4>
+<div class="paragraph">
+<p>Die Klasse <code>Rodungsstand</code> beinhaltet die Werte über den Stand der Rodung bzw. den Stand der Ersatzmassnahmen. Die Werte entsprecht im Bundesmodell der Aufzählung <code>StandTyp</code>.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Beschreibung</th>
+<th class="tableblock halign-left valign-top">Beispiel</th>
+<th class="tableblock halign-left valign-top">Freigabe</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock"><em>Diese Klasse führt keine zusätzlichen Attribute</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock"><strong>Anforderungen</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Code</code></p></td>
+<td class="tableblock halign-left valign-top" colspan="3"><p class="tableblock">Die Werte müssen eindeutig sein</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Name</code></p></td>
+<td class="tableblock halign-left valign-top" colspan="3"><p class="tableblock">Die Werte müssen eindeutig sein</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_klasse_gemeinde"><a class="anchor" href="#_klasse_gemeinde"></a><a class="link" href="#_klasse_gemeinde">4.1.9. Klasse <code>Gemeinde</code></a></h4>
+<div class="paragraph">
+<p>Die Klasse <code>Gemeinde</code> führte die schwyzer Gemeinden. Dieser Katalog ist eine kantonale Erweiterung.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Beschreibung</th>
+<th class="tableblock halign-left valign-top">Beispiel</th>
+<th class="tableblock halign-left valign-top">Freigabe</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock"><em>Diese Klasse führt keine zusätzlichen Attribute</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock"><strong>Anforderungen</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Code</code></p></td>
+<td class="tableblock halign-left valign-top" colspan="3"><p class="tableblock">Die Werte müssen eindeutig sein</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Name</code></p></td>
+<td class="tableblock halign-left valign-top" colspan="3"><p class="tableblock">Die Werte müssen eindeutig sein</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_klasse_genauigkeit"><a class="anchor" href="#_klasse_genauigkeit"></a><a class="link" href="#_klasse_genauigkeit">4.1.10. Klasse <code>Genauigkeit</code></a></h4>
+<div class="paragraph">
+<p>Die Klasse <code>Genauigkeit</code> führte Angaben über die Genauigkeit der Geometrien. Dieser Katalog ist eine kantonale Erweiterung.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Beschreibung</th>
+<th class="tableblock halign-left valign-top">Beispiel</th>
+<th class="tableblock halign-left valign-top">Freigabe</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock"><em>Diese Klasse führt keine zusätzlichen Attribute</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock"><strong>Anforderungen</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Code</code></p></td>
+<td class="tableblock halign-left valign-top" colspan="3"><p class="tableblock">Die Werte müssen eindeutig sein</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Name</code></p></td>
+<td class="tableblock halign-left valign-top" colspan="3"><p class="tableblock">Die Werte müssen eindeutig sein</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>todo: Werte in Masterkatalog erfassen:  (geometergenau, GPS-Einmessung, Daten vom Planer, digitalisiert mit Planscan, abgezeichnet, von AWN festgelgt)</p>
+</div>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_topic_fachdaten"><a class="anchor" href="#_topic_fachdaten"></a><a class="link" href="#_topic_fachdaten">4.2. Topic <code>Fachdaten</code></a></h3>
@@ -743,6 +947,9 @@ Christoph Angst (ChA), AWN</p></td>
 <h4 id="_klasse_rodungsbewilligung"><a class="anchor" href="#_klasse_rodungsbewilligung"></a><a class="link" href="#_klasse_rodungsbewilligung">4.2.1. Klasse <code>Rodungsbewilligung</code></a></h4>
 <div class="paragraph">
 <p>Die Klasse <code>Rodungsbewilligung</code> führt die Daten zur Rodungsbewilligung.</p>
+</div>
+<div class="paragraph">
+<p>todo: Klaren, ob die fakultativen Attribute geführt werden müssen.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -1889,7 +2096,7 @@ Regel: Es werden nur Objekte der Klasse <code>Lage</code> transferiert, welche <
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-02-17 15:50:26 UTC
+Last updated 2026-02-18 10:35:06 UTC
 </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>
