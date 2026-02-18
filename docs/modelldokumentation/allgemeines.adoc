@@ -9,7 +9,7 @@ Dieses Dokument beschreibt den Geobasisdatensatz
  
 * *__Rodungen und Rodungsersatz__.* +
 
-Die für das Thema zuständige Stelle erfasst die Rodungsbewilligungen nach Ablauf der Beschwerdefrist. Damit sind alle Rodungsbewilligungen in Kraft. Damit wird auch auf die Erfassung verfahrensrelevanter Informationen verzichtet. Dies im Unterschied zum Thema "Waldfeststellungen" (A057).
+Die für das Thema zuständige Stelle erfasst die Rodungsbewilligungen nach Ablauf der Beschwerdefrist. Damit sind alle Rodungsbewilligungen in Kraft. Auf das Erfassen verfahrensrelevanter Informationen wird verzichtet. Dies im Unterschied zum Thema "Waldfeststellungen" (A057).
 
 === Zielgruppen
 Dieses Dokument richtet sich an folgende Nutzergruppen:
