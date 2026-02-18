@@ -226,35 +226,35 @@ m| hat_Realersatzpflicht
 | ja
 | öffentlich
 m| Rodungsflaeche_def
-| Fläche in m^2, die definitiv geordet wird
+| Fläche in m^2^, die definitiv geordet wird
 | 1234.00
 | öffentlich
 m| Rodungsflaeche_temp
-| Fläche in m^2, die temporär geordet wird
+| Fläche in m^2^, die temporär geordet wird
 | 4321.00
 | öffentlich
 m| Rodungsflaeche_histo
-| Fläche in m^2 früherer Rodungen der letzten 15 Jahre
+| Fläche in m^2^ früherer Rodungen der letzten 15 Jahre
 | 9876.00
 | öffentlich
 m| Realersatzflaeche
-| Fläche in m^2 des Realersatzes
+| Fläche in m^2^ des Realersatzes
 | 1212.00
 | öffentlich
 m| Verzichtsflaeche
-| Fläche in m^2, für die auf Rodungsersatz verzichtet wird
+| Fläche in m^2^, für die auf Rodungsersatz verzichtet wird
 | 50.00
 | öffentlich
 m| Massnahmeflaeche_total
-| Gesamtfläche in m^2, auf der Massnahmen zu Gunsten des Natur- und Landschaftsschutzes zu leisten sind
+| Gesamtfläche in m^2^, auf der Massnahmen zu Gunsten des Natur- und Landschaftsschutzes zu leisten sind
 | 850.00
 | öffentlich
 m| EA_Flaeche_total
-| Gesamtfläche in m^2, auf der Ersatzaufforstung geleistet wird
+| Gesamtfläche in m^2^, auf der Ersatzaufforstung geleistet wird
 | 125.00
 | öffentlich
 m| EA_Flaeche_gebietsfremd
-| Gesamtfläche in m^2, auf der Ersatzaufforstung in einem anderen Gebiet geleistet wird
+| Gesamtfläche in m^2^, auf der Ersatzaufforstung in einem anderen Gebiet geleistet wird
 | 215.00
 | öffentlich
 m| Massnahmebeschreibung
@@ -262,11 +262,11 @@ m| Massnahmebeschreibung
 | eine Beschreibung
 | öffentlich
 m| Massnahmeflaeche_Wald
-| Fläche in m^2 der Natur- und Landschaftsschutzmassnahmen als Ersatz im Waldareal
+| Fläche in m^2^ der Natur- und Landschaftsschutzmassnahmen als Ersatz im Waldareal
 | 60.00
 | öffentlich
 m| Massnahmeflaeche_Nichtwald
-| Fläche in m^2 der Natur- und Landschaftsschutzmassnahmen als Ersatz ausserhalb des Waldareals
+| Fläche in m^2^ der Natur- und Landschaftsschutzmassnahmen als Ersatz ausserhalb des Waldareals
 | 20.00
 | öffentlich
 m| hat_Massnahmenpool
@@ -377,7 +377,7 @@ m|rGemeinde
 |===
 
 ==== Klasse `+Geometrie+`
-Die Klasse `+Geometrie+` enthält die allgemeinen, für alle geometrischen Klassen gemeinsamen Attribute. Die Klasse selber ist abstrakt: Es gibt keine Objekte +Geometrieg+, sondern nur Objekte von den spezialisierten Klassen.
+Die Klasse `+Geometrie+` enthält die allgemeinen, für alle geometrischen Klassen gemeinsamen Attribute. Die Klasse selber ist abstrakt: Es gibt keine Objekte `+Geometrie+`, sondern nur Objekte von den spezialisierten Klassen.
 
 [cols=4*,options="header"]
 |===
