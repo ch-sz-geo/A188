@@ -176,8 +176,6 @@ m|Name
 3+| Die Werte müssen eindeutig sein
 |===
 
-todo: Werte in Masterkatalog erfassen:  (geometergenau, GPS-Einmessung, Daten vom Planer, digitalisiert mit Planscan, abgezeichnet, von AWN festgelgt)
-
 === Topic `+Fachdaten+`
 Das Topic `+Fachdaten+` umfasst die eigentlichen, fachlichen Klassen des Themas.
 
