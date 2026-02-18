@@ -4,6 +4,7 @@ image::../img/SZ_Rodungen_V1_Komponentendiagramm.png[]
 
 === Klassendiagramm
 image::../img/SZ_Rodungen_V1_Klassendiagramm.png[]
+image::../img/Legende.png[width=350]
 
 ifdef::backend-pdf[]
 <<<
