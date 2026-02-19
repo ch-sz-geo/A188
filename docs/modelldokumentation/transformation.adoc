@@ -12,54 +12,6 @@ Die Erstintegration beschreibt die erstmalige Datenübernahme aus dem bisherigen
 ** **Rodungen&Ersatz - Kopie.gpkg** mit Stand vom 26.01.2026 (weiter unten als "[Geo-1]" bezeichnet)
 ** **Nachteilige_Nutzungen_KTSZ - Kopie.gpkg** mit Stand vom 11.12.2024 (weiter unten als "[Geo-2]" bezeichnet)
 
-==== Klasse `+Lage+`
-[cols=2*,options="header"]
-|===
-| Quellattribut | Zielattribut
-| fix: `+geoadmin+` m| erfasstVon
-| falls `+ImGISerfasst+` leer, dann `+1900-01-01+` +
-sonst `+ImGISerfasst+` m| erfasstAm
-| fix: `+geoadmin+` m| geaendertVon
-| Wert von `+erfasstAm+` m| geaendertAm
-| todo: Abbildungsregel klären m| Massnahmebeschreibung
-| todo: Abbildungsregel klären m| Bemerkung
-| falls `+Schwerpunkt+` leer, dann FALSE +
-sonst TRUE m| ist_Schwerpunkt
-| für den Schwerpunkt: Koordinaten aus `+Schwerpunkt+` +
-für Rodungspunkte: Koordinaten der Spalten `+RO_XKoord_Fläche1-10+`/`+RO_YKoord_Fläche1-10+` +
-für Massnahmenpunkte: Koordinaten der Spalten `+EA_XKoord_Fläche1-6+`/`+EA_YKoord_Fläche1-6+` +
-todo: Klären, ob es in den Geopackeages Punkt-Geometrien gibt, welche zusätzlich zu übernehmen sind m| Geometrie
-| `+OID+` der zugeordneten Rodungsbewilligung m| rRodungsbewilligung
-| `+Stammdaten.Genauigkeit.OID+` des Eintrages, welcher mit `+GISGenauigkeit+` übereinstimmt +
-(evtl. stimmen die Werte nicht 1:1) m| rGenauigkeit
-| todo: Abbildungsregel klären (evtl. leer lassen) m| rMassnahme
-| todo: Abbildungsregel klären m| rRodungstyp
-|===
-
-==== Klasse `+Flaeche+`
-[cols=2*,options="header"]
-|===
-| Quellattribut | Zielattribut
-| fix: `+geoadmin+` m| erfasstVon
-| falls `+ImGISerfasst+` leer, dann `+1900-01-01+` +
-sonst `+ImGISerfasst+` m| erfasstAm
-| fix: `+geoadmin+` m| geaendertVon
-| Wert von `+erfasstAm+` m| geaendertAm
-| [Geo-1] `+Rodungen&Ersatz.Massnahme+` m| Massnahmebeschreibung
-| [Geo-1] `+Rodungen&Ersatz.Bemerkung+` m| Bemerkung
-| [Geo-1] `+Rodungen&Ersatz.Geometrie+` +
-todo: Klären, wie mit der Geometrie [Geo-2] umzugehen ist m| Geometrie
-| `+OID+` der zugeordneten Rodungsbewilligung m| rRodungsbewilligung
-| `+Stammdaten.Genauigkeit.OID+` des Eintrages, welcher mit `+GISGenauigkeit+` übereinstimmt +
-(evtl. stimmen die Werte nicht 1:1) m| rGenauigkeit
-| todo: Abbildungsregel klären (evtl. leer lassen) m| rMassnahme
-| `+Stammdaten.Rodungstyp.OID+` aufgrund [Geo-1] `+Rodungen&Ersatz.Kategorie+`; Abbildung: +
-`+"EA"+` -> `+"Realersatz"+` + 
-`+"Niederhalt"+` -> todo: Kategorie klären (`+"Massnahmen Natur- und Landschaftsschutz"+`?) + 
-`+"ROdef"+` -> `+"Rodung definitiv"+` + 
-`+"ROTemp"+` -> `+"Rodung temporär"+` m| rRodungstyp
-|===
-
 ==== Klasse `+Rodungsbewilligung+`
 [cols=2*,options="header"]
 |===
@@ -113,7 +65,53 @@ Verzicht, da alle Rodungen geometrisch erfasst werden. m| Schwerpunkt
 | todo m| Objekte
 |===
 
+==== Klasse `+Lage+`
+[cols=2*,options="header"]
+|===
+| Quellattribut | Zielattribut
+| fix: `+geoadmin+` m| erfasstVon
+| falls `+ImGISerfasst+` leer, dann `+1900-01-01+` +
+sonst `+ImGISerfasst+` m| erfasstAm
+| fix: `+geoadmin+` m| geaendertVon
+| Wert von `+erfasstAm+` m| geaendertAm
+| todo: Abbildungsregel klären m| Massnahmebeschreibung
+| todo: Abbildungsregel klären m| Bemerkung
+| falls `+Schwerpunkt+` leer, dann FALSE +
+sonst TRUE m| ist_Schwerpunkt
+| für den Schwerpunkt: Koordinaten aus `+Schwerpunkt+` +
+für Rodungspunkte: Koordinaten der Spalten `+RO_XKoord_Fläche1-10+`/`+RO_YKoord_Fläche1-10+` +
+für Massnahmenpunkte: Koordinaten der Spalten `+EA_XKoord_Fläche1-6+`/`+EA_YKoord_Fläche1-6+` +
+todo: Klären, ob es in den Geopackeages Punkt-Geometrien gibt, welche zusätzlich zu übernehmen sind m| Geometrie
+| `+OID+` der zugeordneten Rodungsbewilligung m| rRodungsbewilligung
+| `+Stammdaten.Genauigkeit.OID+` des Eintrages, welcher mit `+GISGenauigkeit+` übereinstimmt +
+(evtl. stimmen die Werte nicht 1:1) m| rGenauigkeit
+| todo: Abbildungsregel klären (evtl. leer lassen) m| rMassnahme
+| todo: Abbildungsregel klären m| rRodungstyp
+|===
 
+==== Klasse `+Flaeche+`
+[cols=2*,options="header"]
+|===
+| Quellattribut | Zielattribut
+| fix: `+geoadmin+` m| erfasstVon
+| falls `+ImGISerfasst+` leer, dann `+1900-01-01+` +
+sonst `+ImGISerfasst+` m| erfasstAm
+| fix: `+geoadmin+` m| geaendertVon
+| Wert von `+erfasstAm+` m| geaendertAm
+| [Geo-1] `+Rodungen&Ersatz.Massnahme+` m| Massnahmebeschreibung
+| [Geo-1] `+Rodungen&Ersatz.Bemerkung+` m| Bemerkung
+| [Geo-1] `+Rodungen&Ersatz.Geometrie+` +
+todo: Klären, wie mit der Geometrie [Geo-2] umzugehen ist m| Geometrie
+| `+OID+` der zugeordneten Rodungsbewilligung m| rRodungsbewilligung
+| `+Stammdaten.Genauigkeit.OID+` des Eintrages, welcher mit `+GISGenauigkeit+` übereinstimmt +
+(evtl. stimmen die Werte nicht 1:1) m| rGenauigkeit
+| todo: Abbildungsregel klären (evtl. leer lassen) m| rMassnahme
+| `+Stammdaten.Rodungstyp.OID+` aufgrund [Geo-1] `+Rodungen&Ersatz.Kategorie+`; Abbildung: +
+`+"EA"+` -> `+"Realersatz"+` + 
+`+"Niederhalt"+` -> todo: Kategorie klären (`+"Massnahmen Natur- und Landschaftsschutz"+`?) + 
+`+"ROdef"+` -> `+"Rodung definitiv"+` + 
+`+"ROTemp"+` -> `+"Rodung temporär"+` m| rRodungstyp
+|===
 
 
 === Transformation ins minimale Geodatenmodell des Bundes
@@ -240,6 +238,7 @@ Regel: Es werden nur Objekte der Klasse `+Lage+` transferiert, welche `+ist_Schw
 ifdef::backend-pdf[]
 <<<
 endif::[]
+
 
 
 
