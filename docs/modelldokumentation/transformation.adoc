@@ -9,19 +9,37 @@ Die Erstintegration beschreibt die erstmalige Datenübernahme aus dem bisherigen
 * Sachdaten
 ** **RodungenSZ_Datenbank.accdb** mit Abgabedatum vom 29. Januar 2026
 * Geodaten
-** **Nachteilige_Nutzungen_KTSZ - Kopie.gpkg** mit Stand vom 11.12.2024 (weiter unten als "Geo-1" bezeichnet)
-** **Rodungen&Ersatz - Kopie.gpkg** mit Stand vom 26.01.2026 (weiter unten als "Geo-2" bezeichnet)
+** **Rodungen&Ersatz - Kopie.gpkg** mit Stand vom 26.01.2026 (weiter unten als "[Geo-1]" bezeichnet)
+** **Nachteilige_Nutzungen_KTSZ - Kopie.gpkg** mit Stand vom 11.12.2024 (weiter unten als "[Geo-2]" bezeichnet)
 
-==== Struktur `+Objekt+`
+==== Klasse `+Lage+`
 [cols=2*,options="header"]
 |===
 | Quellattribut | Zielattribut
-| - - - m| Punkt
-| Geo-1: `+Rodungen_Ersatz.Geometrie+` m| `+SZ_Rodungen_V1.Fachdaten.Flaeche.Geometrie+`
-| `+SZ_Rodungen_V1.Fachdaten.Geometrie.rErsatztyp+` m| Objekt_Typ
-| `+SZ_Rodungen_V1.Fachdaten.Geometrie.rErsatzmassnahmeart+` m| MassnahmenNL_Typ
-| `+SZ_Rodungen_V1.Fachdaten.Geometrie.Massnahmenbeschreibung+` m| MassnahmenNL_Beschreibung
+| fix: `+geoadmin+` m| erfasstVon
+| falls `+ImGISerfasst+` leer, dann `+1900-01-01+` +
+sonst `+ImGISerfasst+` m| erfasstAm
+| fix: `+geoadmin+` m| geaendertVon
+| Wert von `+erfasstAm+` m| geaendertAm
+| todo: Abbildungsregel klären m| Massnahmebeschreibung
+| todo: Abbildungsregel klären m| Bemerkung
+| falls `+Schwerpunkt+` leer, dann FALSE +
+sonst TRUE m| ist_Schwerpunkt
+| für den Schwerpunkt: Koordinaten aus `+Schwerpunkt+` +
+für Rodungspunkte: Koordinaten der Spalten `+RO_XKoord_Fläche1-10+`/`+RO_YKoord_Fläche1-10+` +
+für Massnahmenpunkte: Koordinaten der Spalten `+EA_XKoord_Fläche1-6+`/`+EA_YKoord_Fläche1-6+` +
+todo: Klären, ob es in den Geopackeages Punkt-Geometrien gibt, welche zusätzlich zu übernehmen sind m| Geometrie
+| `+OID+` der zugeordneten Rodungsbewilligung m| rRodungsbewilligung
+| `+Stammdaten.Genauigkeit.OID+` des Eintrages, welcher mit `+GISGenauigkeit+` übereinstimmt +
+(evtl. stimmen die Werte nicht 1:1) m| rGenauigkeit
+| todo: Abbildungsregel klären m| rMassnahme
+| todo: Abbildungsregel klären m| rRodungstyp
 |===
+
+
+| Geo-1: `+Rodungen_Ersatz.Geometrie+` m| `+SZ_Rodungen_V1.Fachdaten.Flaeche.Geometrie+`
+
+
 
 ==== Klasse `+Rodungsbewilligung+`
 [cols=2*,options="header"]
@@ -203,6 +221,7 @@ Regel: Es werden nur Objekte der Klasse `+Lage+` transferiert, welche `+ist_Schw
 ifdef::backend-pdf[]
 <<<
 endif::[]
+
 
 
 
