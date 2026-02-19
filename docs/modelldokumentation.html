@@ -237,9 +237,9 @@ th {
 <li><a href="#_erstintegration">5.1. Erstintegration</a>
 <ul class="sectlevel3">
 <li><a href="#_details_zu_den_daten">5.1.1. Details zu den Daten</a></li>
-<li><a href="#_klasse_lage_2">5.1.2. Klasse <code>Lage</code></a></li>
-<li><a href="#_klasse_flaeche_2">5.1.3. Klasse <code>Flaeche</code></a></li>
-<li><a href="#_klasse_rodungsbewilligung_2">5.1.4. Klasse <code>Rodungsbewilligung</code></a></li>
+<li><a href="#_klasse_rodungsbewilligung_2">5.1.2. Klasse <code>Rodungsbewilligung</code></a></li>
+<li><a href="#_klasse_lage_2">5.1.3. Klasse <code>Lage</code></a></li>
+<li><a href="#_klasse_flaeche_2">5.1.4. Klasse <code>Flaeche</code></a></li>
 </ul>
 </li>
 <li><a href="#_transformation_ins_minimale_geodatenmodell_des_bundes">5.2. Transformation ins minimale Geodatenmodell des Bundes</a>
@@ -1509,146 +1509,7 @@ Christoph Angst (ChA), AWN</p></td>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_klasse_lage_2"><a class="anchor" href="#_klasse_lage_2"></a><a class="link" href="#_klasse_lage_2">5.1.2. Klasse <code>Lage</code></a></h4>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Quellattribut</th>
-<th class="tableblock halign-left valign-top">Zielattribut</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fix: <code>geoadmin</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>erfasstVon</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">falls <code>ImGISerfasst</code> leer, dann <code>1900-01-01</code><br>
-sonst <code>ImGISerfasst</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>erfasstAm</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fix: <code>geoadmin</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>geaendertVon</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Wert von <code>erfasstAm</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>geaendertAm</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">todo: Abbildungsregel klären</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Massnahmebeschreibung</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">todo: Abbildungsregel klären</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Bemerkung</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">falls <code>Schwerpunkt</code> leer, dann FALSE<br>
-sonst TRUE</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ist_Schwerpunkt</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">für den Schwerpunkt: Koordinaten aus <code>Schwerpunkt</code><br>
-für Rodungspunkte: Koordinaten der Spalten <code>RO_XKoord_Fläche1-10</code>/<code>RO_YKoord_Fläche1-10</code><br>
-für Massnahmenpunkte: Koordinaten der Spalten <code>EA_XKoord_Fläche1-6</code>/<code>EA_YKoord_Fläche1-6</code><br>
-todo: Klären, ob es in den Geopackeages Punkt-Geometrien gibt, welche zusätzlich zu übernehmen sind</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Geometrie</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>OID</code> der zugeordneten Rodungsbewilligung</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>rRodungsbewilligung</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Stammdaten.Genauigkeit.OID</code> des Eintrages, welcher mit <code>GISGenauigkeit</code> übereinstimmt<br>
-(evtl. stimmen die Werte nicht 1:1)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>rGenauigkeit</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">todo: Abbildungsregel klären (evtl. leer lassen)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>rMassnahme</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">todo: Abbildungsregel klären</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>rRodungstyp</code></p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect3">
-<h4 id="_klasse_flaeche_2"><a class="anchor" href="#_klasse_flaeche_2"></a><a class="link" href="#_klasse_flaeche_2">5.1.3. Klasse <code>Flaeche</code></a></h4>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Quellattribut</th>
-<th class="tableblock halign-left valign-top">Zielattribut</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fix: <code>geoadmin</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>erfasstVon</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">falls <code>ImGISerfasst</code> leer, dann <code>1900-01-01</code><br>
-sonst <code>ImGISerfasst</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>erfasstAm</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fix: <code>geoadmin</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>geaendertVon</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Wert von <code>erfasstAm</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>geaendertAm</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">[Geo-1] <code>Rodungen&amp;Ersatz.Massnahme</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Massnahmebeschreibung</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">[Geo-1] <code>Rodungen&amp;Ersatz.Bemerkung</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Bemerkung</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">[Geo-1] <code>Rodungen&amp;Ersatz.Geometrie</code><br>
-todo: Klären, wie mit der Geometrie [Geo-2] umzugehen ist</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Geometrie</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>OID</code> der zugeordneten Rodungsbewilligung</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>rRodungsbewilligung</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Stammdaten.Genauigkeit.OID</code> des Eintrages, welcher mit <code>GISGenauigkeit</code> übereinstimmt<br>
-(evtl. stimmen die Werte nicht 1:1)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>rGenauigkeit</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">todo: Abbildungsregel klären (evtl. leer lassen)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>rMassnahme</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Stammdaten.Rodungstyp.OID</code> aufgrund [Geo-1] <code>Rodungen&amp;Ersatz.Kategorie</code>; Abbildung:<br>
-<code>"EA"</code> &#8594; <code>"Realersatz"</code><br>
-<code>"Niederhalt"</code> &#8594; todo: Kategorie klären (<code>"Massnahmen Natur- und Landschaftsschutz"</code>?)<br>
-<code>"ROdef"</code> &#8594; <code>"Rodung definitiv"</code><br>
-<code>"ROTemp"</code> &#8594; <code>"Rodung temporär"</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>rRodungstyp</code></p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect3">
-<h4 id="_klasse_rodungsbewilligung_2"><a class="anchor" href="#_klasse_rodungsbewilligung_2"></a><a class="link" href="#_klasse_rodungsbewilligung_2">5.1.4. Klasse <code>Rodungsbewilligung</code></a></h4>
+<h4 id="_klasse_rodungsbewilligung_2"><a class="anchor" href="#_klasse_rodungsbewilligung_2"></a><a class="link" href="#_klasse_rodungsbewilligung_2">5.1.2. Klasse <code>Rodungsbewilligung</code></a></h4>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 50%;">
@@ -1806,6 +1667,145 @@ Verzicht, da alle Rodungen geometrisch erfasst werden.</p></td>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">todo</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Objekte</code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_klasse_lage_2"><a class="anchor" href="#_klasse_lage_2"></a><a class="link" href="#_klasse_lage_2">5.1.3. Klasse <code>Lage</code></a></h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Quellattribut</th>
+<th class="tableblock halign-left valign-top">Zielattribut</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">fix: <code>geoadmin</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>erfasstVon</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">falls <code>ImGISerfasst</code> leer, dann <code>1900-01-01</code><br>
+sonst <code>ImGISerfasst</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>erfasstAm</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">fix: <code>geoadmin</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>geaendertVon</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Wert von <code>erfasstAm</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>geaendertAm</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">todo: Abbildungsregel klären</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Massnahmebeschreibung</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">todo: Abbildungsregel klären</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Bemerkung</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">falls <code>Schwerpunkt</code> leer, dann FALSE<br>
+sonst TRUE</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ist_Schwerpunkt</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">für den Schwerpunkt: Koordinaten aus <code>Schwerpunkt</code><br>
+für Rodungspunkte: Koordinaten der Spalten <code>RO_XKoord_Fläche1-10</code>/<code>RO_YKoord_Fläche1-10</code><br>
+für Massnahmenpunkte: Koordinaten der Spalten <code>EA_XKoord_Fläche1-6</code>/<code>EA_YKoord_Fläche1-6</code><br>
+todo: Klären, ob es in den Geopackeages Punkt-Geometrien gibt, welche zusätzlich zu übernehmen sind</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Geometrie</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>OID</code> der zugeordneten Rodungsbewilligung</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>rRodungsbewilligung</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Stammdaten.Genauigkeit.OID</code> des Eintrages, welcher mit <code>GISGenauigkeit</code> übereinstimmt<br>
+(evtl. stimmen die Werte nicht 1:1)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>rGenauigkeit</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">todo: Abbildungsregel klären (evtl. leer lassen)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>rMassnahme</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">todo: Abbildungsregel klären</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>rRodungstyp</code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_klasse_flaeche_2"><a class="anchor" href="#_klasse_flaeche_2"></a><a class="link" href="#_klasse_flaeche_2">5.1.4. Klasse <code>Flaeche</code></a></h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Quellattribut</th>
+<th class="tableblock halign-left valign-top">Zielattribut</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">fix: <code>geoadmin</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>erfasstVon</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">falls <code>ImGISerfasst</code> leer, dann <code>1900-01-01</code><br>
+sonst <code>ImGISerfasst</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>erfasstAm</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">fix: <code>geoadmin</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>geaendertVon</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Wert von <code>erfasstAm</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>geaendertAm</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[Geo-1] <code>Rodungen&amp;Ersatz.Massnahme</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Massnahmebeschreibung</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[Geo-1] <code>Rodungen&amp;Ersatz.Bemerkung</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Bemerkung</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[Geo-1] <code>Rodungen&amp;Ersatz.Geometrie</code><br>
+todo: Klären, wie mit der Geometrie [Geo-2] umzugehen ist</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Geometrie</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>OID</code> der zugeordneten Rodungsbewilligung</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>rRodungsbewilligung</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Stammdaten.Genauigkeit.OID</code> des Eintrages, welcher mit <code>GISGenauigkeit</code> übereinstimmt<br>
+(evtl. stimmen die Werte nicht 1:1)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>rGenauigkeit</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">todo: Abbildungsregel klären (evtl. leer lassen)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>rMassnahme</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Stammdaten.Rodungstyp.OID</code> aufgrund [Geo-1] <code>Rodungen&amp;Ersatz.Kategorie</code>; Abbildung:<br>
+<code>"EA"</code> &#8594; <code>"Realersatz"</code><br>
+<code>"Niederhalt"</code> &#8594; todo: Kategorie klären (<code>"Massnahmen Natur- und Landschaftsschutz"</code>?)<br>
+<code>"ROdef"</code> &#8594; <code>"Rodung definitiv"</code><br>
+<code>"ROTemp"</code> &#8594; <code>"Rodung temporär"</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>rRodungstyp</code></p></td>
 </tr>
 </tbody>
 </table>
@@ -2201,7 +2201,7 @@ Regel: Es werden nur Objekte der Klasse <code>Lage</code> transferiert, welche <
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-02-19 15:43:30 UTC
+Last updated 2026-02-19 15:44:15 UTC
 </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>
