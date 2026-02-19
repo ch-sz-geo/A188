@@ -16,59 +16,54 @@ Die Erstintegration beschreibt die erstmalige Datenübernahme aus dem bisherigen
 [cols=2*,options="header"]
 |===
 | Quellattribut | Zielattribut
-| `+SZ_Verfahren_Waldrecht_V1.Fachdaten.Rodung.Kennung+` m| Nr_Kanton
-| `+SZ_Verfahren_Waldrecht_V1.Fachdaten.Rodung.Kennung_Bund+` m| Nr_Bund
-| `+SZ_Verfahren_Waldrecht_V1.Fachdaten.Rodung.Name+` m| Vorhaben
-| `+SZ_Rodungen_V1.Fachdaten.Geometrie.ist_Realersatz+` +
-Regel: falls eine der zugewiesenen Geometrien TRUE aufweist, wird TRUE gesetzt; andernfalls FALSE m| Ersatz_Real
-| `+SZ_Rodungen_V1.Stammdaten.Ersatzmassnahmeart.Code+` +
-über `+SZ_Rodungen_V1.Fachdaten.Geometrie.rErsatzmassnahmeart+` +
-Regel: BAG wird gebildet über alle Ersatzmassnahmearten der zugeordneten Geometrien m| Ersatz_MassnahmenNL
-| `+SZ_Rodungen_V1.Stammdaten.Verzichtsgrund.Code+` +
-über `+SZ_Rodungen_V1.Fachdaten.Geometrie.rVerzichtsgrund+` +
-Regel: BAG wird gebildet über alle Verzichtsgründe der zugeordneten Geometrien m| Ersatz_Verzicht
-| `+SZ_Rodungen_V1.Stammdaten.Zustaendigkeit.Code+` m| Zustaendigkeit
-| `+SZ_Rodungen_V1.Fachdaten.Rodung.Rodungsflaeche_def+` m| Flaeche_Rodung_def
-| `+SZ_Rodungen_V1.Fachdaten.Rodung.Rodungsflaeche_temp+` m| Flaeche_Rodung_temp
-| `+SZ_Rodungen_V1.Fachdaten.Rodung.Rodungsflaeche_histo+` m| Flaeche_Fruehere_Rodung15Jahre
-| `+SZ_Rodungen_V1.Fachdaten.Rodung.Realersatzflaeche+` m| Flaeche_Ersatz_Real
-| `+SZ_Rodungen_V1.Fachdaten.Rodung.Verzichtsflaeche+` m| Flaeche_Ersatz_Verzicht
-| `+SZ_Rodungen_V1.Fachdaten.Rodung.Massnahmeflaeche_total+` m| Flaeche_Ersatz_MassnahmenNL
-| über Stammdaten lösen m| MassnahmenNL_Typ
-| `+SZ_Rodungen_V1.Fachdaten.Rodung.Massnahmenbeschreibung+` + 
-Achtung: MTEXT; Zeilenumbrüche sind mit einem Leerschlag zu ersetzen m| MassnahmenNL_Beschreibung
-| `+SZ_Rodungen_V1.Fachdaten.Rodung.Massnahmeflaeche_Wald+` m| FlaecheMassnahmeNL_ImWaldareal
-| `+SZ_Rodungen_V1.Fachdaten.Rodung.Massnahmeflaeche_Nichtwald+` m| FlaecheMassnahmeNL_AusserhalbWaldareal
-| `+SZ_Rodungen_V1.Fachdaten.Rodung.hat_Massnahmenpool+` m| MassnahmeNL_Pool
-| `+SZ_Rodungen_V1.Fachdaten.Rodung.Massnahmenbemerkung+` + 
-Achtung: MTEXT; Zeilenumbrüche sind mit einem Leerschlag zu ersetzen m| Massnahme_WeitereBemerkungen
-| `+SZ_Rodungen_V1.Fachdaten.Rodung.rRodungszweck+` m| Rodungszweck
-| `+SZ_Rodungen_V1.Fachdaten.Rodung.Rodungszweckbemerkung+` + 
-Achtung: MTEXT; Zeilenumbrüche sind mit einem Leerschlag zu ersetzen m| Rodungszweck_Bemerkungen
-| `+SZ_Rodungen_V1.Fachdaten.Rodung.Rodungsfrist+` m| Frist_Rodung
-| `+SZ_Rodungen_V1.Fachdaten.Rodung.Rodungsfristbemerkung+` + 
-Achtung: MTEXT; Zeilenumbrüche sind mit einem Leerschlag zu ersetzen m| Frist_Rodung_Bemerkung
-| `+SZ_Rodungen_V1.Fachdaten.Rodung.Ersatzfrist+` m| Frist_Ersatz
-| `+SZ_Rodungen_V1.Fachdaten.Rodung.Ersatzfristbemerkung+` + 
-Achtung: MTEXT; Zeilenumbrüche sind mit einem Leerschlag zu ersetzen m| Frist_Ersatz_Bemerkung
-| `+SZ_Rodungen_V1.Fachdaten.Rodung.hat_Ausgleich+` m| Ausgleich
-| todo +
-Soll über den Verfahrensstatus realisiert werden m| Stand_Abgeschlossen
-| `+SZ_Verfahren_Waldrecht_V1.Fachdaten.Rodung.Abschlussdatum+` +
-todo: Abhängigkeit zu `+Stand_Abgeschlossen+` beachten m| Datum_Abgeschlossen
-| `+SZ_Verfahren_Waldrecht_V1.Fachdaten.Verfahren.Verfuegungsdatum+` m| Verfuegung_Datum
-| `+SZ_Verfahren_Waldrecht_V1.Fachdaten.Verfahren.Verfuegungslink+` m| Verfuegung_URL
-| `+SZ_Verfahren_Waldrecht_V1.Fachdaten.Rodung.Referenz+` +
-Achtung: MTEXT; Zeilenumbrüche sind mit einem Leerschlag zu ersetzen m| Weitere_Referenzen
-| - - - +
-Verzicht, da alle Rodungen geometrisch erfasst werden. m| Schwerpunkt
-| todo m| Objekte
+| neu generieren m| OID
+| fix: `+geoadmin+` m| erfasstVon
+| fix: `+1900-01-01+` m| erfasstAm
+| fix: `+geoadmin+` m| geaendertVon
+| fix: `+1900-01-01+` m| geaendertAm
+| todo m| Kennung
+| todo m| Kennung_Bund
+| todo m| Beschreibung
+| todo m| hat_Realersatzpflicht
+| todo m| Rodungsflaeche_def
+| todo m| Rodungsflaeche_temp
+| todo m| Rodungsflaeche_histo
+| todo m| Realersatzflaeche
+| todo m| Verzichtsflaeche
+| todo m| Massnahmeflaeche_total
+| todo m| EA_Flaeche_total
+| todo m| EA_Flaeche_gebietsfremd
+| todo m| Massnahmenbeschreibung
+| todo m| Massnahmeflaeche_Wald
+| todo m| Massnahmeflaeche_Nichtwald
+| todo m| hat_Massnahmenpool
+| todo m| Massnahmenbemerkung
+| todo m| Rodungszweckbemerkung
+| todo m| Rodungsfrist
+| todo m| Fristverlaengerung_RO
+| todo m| Rodungsfristbemerkung
+| todo m| Ersatzfrist
+| todo m| Ersatzfristbemerkung
+| todo m| Fristverlaengerung_EA
+| todo m| hat_Finanzausgleich
+| todo m| Abschlussdatum
+| todo m| Verfuegungsdatum
+| todo m| Referenz
+| todo m| Rodungsnummer
+| todo m| Baugesuchsnummer
+| todo m| Bemerkung_intern
+| todo m| Bemerkung
+| todo m| rZustaendigkeit
+| todo m| rRodungszweck
+| todo m| rRodungsstand
+| todo m| rGemeinde
 |===
 
 ==== Klasse `+Lage+`
 [cols=2*,options="header"]
 |===
 | Quellattribut | Zielattribut
+| neu generieren m| OID
 | fix: `+geoadmin+` m| erfasstVon
 | falls `+ImGISerfasst+` leer, dann `+1900-01-01+` +
 sonst `+ImGISerfasst+` m| erfasstAm
@@ -93,6 +88,7 @@ todo: Klären, ob es in den Geopackeages Punkt-Geometrien gibt, welche zusätzli
 [cols=2*,options="header"]
 |===
 | Quellattribut | Zielattribut
+| neu generieren m| OID
 | fix: `+geoadmin+` m| erfasstVon
 | falls `+ImGISerfasst+` leer, dann `+1900-01-01+` +
 sonst `+ImGISerfasst+` m| erfasstAm
@@ -238,6 +234,7 @@ Regel: Es werden nur Objekte der Klasse `+Lage+` transferiert, welche `+ist_Schw
 ifdef::backend-pdf[]
 <<<
 endif::[]
+
 
 
 
