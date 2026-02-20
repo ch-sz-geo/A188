@@ -49,7 +49,6 @@ Die Erstintegration beschreibt die erstmalige Datenübernahme aus dem bisherigen
 | `+RodungenSZ.Datum_Abgeschlossen+` m| Abschlussdatum
 | `+RodungenSZ.Verfügungsdatum+` m| Verfuegungsdatum
 | (keine Daten vorhanden) m| Referenz
-| todo: aus Modell streichen m| Rodungsnummer
 | `+RodungenSZ.BGZ_Nr+` m| Baugesuchsnummer
 | `+RodungenSZ.Bemerkung_intern+` m|
 | (keine Daten vorhanden) m| Bemerkung
@@ -240,6 +239,7 @@ Regel: Es werden nur Objekte der Klasse `+Lage+` transferiert, welche `+ist_Schw
 ifdef::backend-pdf[]
 <<<
 endif::[]
+
 
 
 
