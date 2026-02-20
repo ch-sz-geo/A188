@@ -30,36 +30,39 @@ Die Erstintegration beschreibt die erstmalige Datenübernahme aus dem bisherigen
 | `+RodungenSZ.Flaeche_Fruehere_Rodung15Jahre+` m| Rodungsflaeche_histo
 | `+RodungenSZ.Flaeche_Ersatz_Real+` m| Realersatzflaeche
 | `+RodungenSZ.Flaeche_Ersatz_Verzicht+` m| Verzichtsflaeche
-| todo m| Massnahmeflaeche_total
-| todo m| EA_Flaeche_total
-| todo m| EA_Flaeche_gebietsfremd
-| - - - m| Massnahmenbeschreibung
-| - - - m| Massnahmeflaeche_Wald
-| - - - m| Massnahmeflaeche_Nichtwald
-| - - - m| hat_Massnahmenpool
-| - - - m| Massnahmenbemerkung
-| - - - m| Rodungszweckbemerkung
-| todo m| Rodungsfrist
-| todo m| Fristverlaengerung_RO
-| todo m| Rodungsfristbemerkung
-| todo m| Ersatzfrist
-| todo m| Ersatzfristbemerkung
-| todo m| Fristverlaengerung_EA
-| - - - m| hat_Finanzausgleich
-| todo m| Abschlussdatum
-| todo m| Verfuegungsdatum
-| - - - m| Referenz
-| todo m| Rodungsnummer
-| todo m| Baugesuchsnummer
-| todo m| Bemerkung_intern
-| todo m| Bemerkung
-| todo m| rGemeinde
+| todo: abklären m| Massnahmeflaeche_total
+| `+RodungenSZ.TotalflächeEA+` m| EA_Flaeche_total
+| `+RodungenSZ.EAdefRodungGleicheGegend+` m| EA_Flaeche_gebietsfremd
+| (keine Daten vorhanden) m| Massnahmenbeschreibung
+| (keine Daten vorhanden) m| Massnahmeflaeche_Wald
+| (keine Daten vorhanden) m| Massnahmeflaeche_Nichtwald
+| (keine Daten vorhanden) m| hat_Massnahmenpool
+| (keine Daten vorhanden) m| Massnahmenbemerkung
+| (keine Daten vorhanden) m| Rodungszweckbemerkung
+| `+RodungenSZ.Rodungsfrist+` m| Rodungsfrist
+| `+RodungenSZ.Fristverlängerung+` m| Fristverlaengerung_RO
+| `+RodungenSZ.Frist_Rodung_Bemerkung+` m| Rodungsfristbemerkung
+| `+RodungenSZ.Ersatzaufforstungsfrist+` m| Ersatzfrist
+| `+RodungenSZ.Frist_Ersatz_Bemerkung+` m| Ersatzfristbemerkung
+| `+RodungenSZ.EA-Frist Verlängerung+` m| Fristverlaengerung_EA
+| (keine Daten vorhanden) m| hat_Finanzausgleich
+| `+RodungenSZ.Datum_Abgeschlossen+` m| Abschlussdatum
+| `+RodungenSZ.Verfügungsdatum+` m| Verfuegungsdatum
+| (keine Daten vorhanden) m| Referenz
+| todo: aus Modell streichen m| Rodungsnummer
+| `+RodungenSZ.BGZ_Nr+` m| Baugesuchsnummer
+| `+RodungenSZ.Bemerkung_intern+` m|
+| (keine Daten vorhanden) m| Bemerkung
+| `+OID+` aus Katalog "Gemeinde" mit Übereinstimmung von `+Name+` und `+RodungenSZ.Gemeinde+` + 
+Regeln: +
+Für `+RodungenSZ.Gemeinde+` ist `+Gemeinde__Rodungsbewilligung.ist_fuehrend+` auf TRUE zu setzen. +
+Für `+RodungenSZ.Gemeinde_2+` und `+RodungenSZ.Gemeinde_3+` ist `+Gemeinde__Rodungsbewilligung.ist_fuehrend+` auf FALSE zu setzen. m| rGemeinde
 | `+OID+` aus Katalog "Ersatzmassnahme" mit Übereinstimmung von `+Code+` und `+RodungenSZ.Ersatz_MassnahmenNL+` m| rErsatzmassnahmeart
-| todo m| rVerzichtsgrund
+| `+OID+` aus Katalog "Ersatzverzicht" mit Übereinstimmung von `+Code+` und `+RodungenSZ.Ersatz_Verzicht+` m| rVerzichtsgrund
 | `+OID+` aus Katalog "Zustaendigkeit" mit Übereinstimmung von `+Code+` und `+RodungenSZ.Zuständigkeit+` m| rZustaendigkeit
-| - - - m| rMassnahme
-| todo m| rRodungszweck
-| todo m| rRodungsstand
+| (keine Daten vorhanden) m| rMassnahme
+| `+OID+` aus Katalog "Rodungszweck" mit Übereinstimmung von `+Name+` und `+RodungenSZ.Rodungszweck+` m| rRodungszweck
+| `+OID+` aus Katalog "Rodungsstand" mit Übereinstimmung von `+Code+` und `+RodungenSZ.Stand_Abgeschlossen+` m| rRodungsstand
 |===
 
 ==== Klasse `+Lage+`
@@ -237,6 +240,7 @@ Regel: Es werden nur Objekte der Klasse `+Lage+` transferiert, welche `+ist_Schw
 ifdef::backend-pdf[]
 <<<
 endif::[]
+
 
 
 
