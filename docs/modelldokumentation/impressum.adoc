@@ -31,14 +31,15 @@ h| Version h| Datum h| Koreferent h| Prüfstelle
 .referenzierte Dokumente
 [%collapsible]
 ====
-[cols="10%, 70%, 10%, 10%"]
-|=======
-h| Nr. h| Titel h| Autor(en) h| Version
-| [[doc-01]] [01] | https://www.fedlex.admin.ch/eli/cc/2008/388/de[Bundesgesetz über Geoinformation (GeoIG) (SR 510.62)] | Bund | 05.10.2007
-| [[doc-02]] [02] | https://www.fedlex.admin.ch/eli/cc/2008/389/de[Verordnung über Geoinformation (GeoIV) (SR 510.620)] | Bund | 21.05.2008
-| [[doc-03]] [03] | https://www.sz.ch/public/upload/assets/48275/214_110.pdf?fp=2[kantonales Geoinformationsgesetz (kGeoiG) (SRSZ 214.110)] | Kt. SZ | 24.06.2010
-| [[doc-04]] [04] | https://www.sz.ch/public/upload/assets/5600/214_111.pdf?fp=11[Verordnung zum kantonalen Geoinformationsgesetz (kGeoiV) (SRSZ 214.111)] | Kt. SZ | 18.12.2012
-|=======
+[cols="10%, 90%"]
+|===
+h| Nr h| Dokument
+| [[doc-01]] [01] | _Bundesgesetz über Geoinformation_ (GeoIG) vom 9. Oktober 2007, SR 510.62. https://www.fedlex.admin.ch/eli/cc/2008/388/de[Link]
+| [[doc-02]] [02] | _Verordnung über Geoinformation_ (GeoIV) vom 21. Mai 2008, SR 510.620. https://www.fedlex.admin.ch/eli/cc/2008/389/de[Link]
+| [[doc-03]] [03] | _kantonales Geoinformationsgesetz_ (kGeoiG) vom 24. Juni 2010, SRSZ 214.110. https://www.sz.ch/public/upload/assets/48275/214_110.pdf?fp=2[Link]
+| [[doc-04]] [04] | _Verordnung zum kantonalen Geoinformationsgesetz_ (kGeoiV) vom 18. Dezember 2012, SRSZ 214.111. https://www.sz.ch/public/upload/assets/5600/214_111.pdf?fp=11[Link]
+| [[doc-05]] [05] | _Bundesgesetz über den Wald_ (Waldgesetz, WaG) vom 4. Oktober 1991, SR 921.0. https://www.fedlex.admin.ch/eli/cc/1992/2521_2521_2521/de[Link]
+|===
 ====
 
 ifdef::backend-pdf[]
