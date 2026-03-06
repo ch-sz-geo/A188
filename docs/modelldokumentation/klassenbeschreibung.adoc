@@ -237,13 +237,17 @@ m| Rodungsfrist
 | Frist zur Benutzung der Rodungsbewilligung
 | 2028-06-30
 | öffentlich
+m| Rodungsfristbemerkung
+| Bemerkung zur Rodungsfrist
+| Die 90 Tage Rodungsfrist beginnen mit Rechtskraft der Rodungsbewilligung
+| öffentlich
 m| Fristverlaengerung_RO
 | Frist, bis zu welcher die Rodungsfrist verlängert wird
 | 2028-12-31
 | öffentlich
-m| Rodungsfristbemerkung
-| Bemerkung zur Rodungsfrist
-| Die 90 Tage Rodungsfrist beginnen mit Rechtskraft der Rodungsbewilligung
+m| todo: Name bestimmen "Datum Rodung ausgeführt"
+| todo
+| 2028-12-31
 | öffentlich
 m| Ersatzfrist
 | Frist zur Erfüllung der Ersatzmassnahmen
@@ -255,6 +259,10 @@ m| Ersatzfristbemerkung
 | öffentlich
 m| Fristverlaengerung_EA
 | Frist, bis zu welcher die Ersatzaufforstungt verlängert wird
+| 2031-12-31
+| öffentlich
+m| todo: Name bestimmen "Datum Ersatzaufforstung ausgeführt"
+| todo
 | 2031-12-31
 | öffentlich
 m| hat_Finanzausgleich
