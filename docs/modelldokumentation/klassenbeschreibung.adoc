@@ -245,8 +245,8 @@ m| Fristverlaengerung_RO
 | Frist, bis zu welcher die Rodungsfrist verlängert wird
 | 2028-12-31
 | öffentlich
-m| todo: Name bestimmen "Datum Rodung ausgeführt"
-| todo
+m| Feststelldatum_RO
+| Datum, an dem festgestellt wurde, dass die Rodung erfolgte. Dies geschieht aufgrund einer Begehung vor Ort oder der Analyse des Luftbildes.
 | 2028-12-31
 | öffentlich
 m| Ersatzfrist
@@ -261,8 +261,8 @@ m| Fristverlaengerung_EA
 | Frist, bis zu welcher die Ersatzaufforstungt verlängert wird
 | 2031-12-31
 | öffentlich
-m| todo: Name bestimmen "Datum Ersatzaufforstung ausgeführt"
-| todo
+m| Feststelldatum_EA
+| Datum, an dem festgestellt wurde, dass die Ersatzaufforstung erfolgte. Dies geschieht aufgrund einer Begehung vor Ort oder der Analyse des Luftbildes.
 | 2031-12-31
 | öffentlich
 m| hat_Finanzausgleich
