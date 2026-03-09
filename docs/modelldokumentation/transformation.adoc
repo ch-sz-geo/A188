@@ -33,11 +33,11 @@ Die Erstintegration beschreibt die erstmalige Datenübernahme aus dem bisherigen
 | `+RodungenSZ.Rodungsfrist+` m| Rodungsfrist
 | `+RodungenSZ.Frist_Rodung_Bemerkung+` m| Rodungsfristbemerkung
 | `+RodungenSZ.Fristverlängerung+` m| Fristverlaengerung_RO
-| `+RodungenSZ.Datum Rodung ausgeführt+` m| todo: Name bestimmen
+| `+RodungenSZ.Datum Rodung ausgeführt+` m| Feststelldatum_RO
 | `+RodungenSZ.Ersatzaufforstungsfrist+` m| Ersatzfrist
 | `+RodungenSZ.Frist_Ersatz_Bemerkung+` m| Ersatzfristbemerkung
 | `+RodungenSZ.EA-Frist Verlängerung+` m| Fristverlaengerung_EA
-| `+RodungenSZ.Datum Ersatzaufforstung ausgeführt+` m| todo: Name bestimmen
+| `+RodungenSZ.Datum Ersatzaufforstung ausgeführt+` m| Feststelldatum_EA
 | `+NULL+` m| hat_Finanzausgleich
 | `+RodungenSZ.Datum_Abgeschlossen+` m| Abschlussdatum
 | `+RodungenSZ.Verfügungsdatum+` m| Verfuegungsdatum
@@ -225,6 +225,7 @@ Regel: Es werden nur Objekte der Klasse `+Lage+` transferiert, welche `+ist_Schw
 ifdef::backend-pdf[]
 <<<
 endif::[]
+
 
 
 
