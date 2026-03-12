@@ -7,9 +7,9 @@ Die Erstintegration beschreibt die erstmalige Datenübernahme aus dem bisherigen
 
 ==== Details zu den Daten
 * Sachdaten
-** **RodungenSZ_Datenbank.accdb** mit Abgabedatum vom 26. Februar 2026
+** **RodungenSZ_Datenbank.accdb** mit Abgabedatum vom 11. März 2026
 * Geodaten
-** **Rodungen&Ersatz.gpkg** mit Abgabedatum vom 26. Februar 2026 (weiter unten als "[Geo-1]" bezeichnet)
+** **Rodungen&Ersatz.gpkg** mit Abgabedatum vom 26. Februar 2026 (nachfolgend als "[Geo-1]" bezeichnet)
 
 ==== Klasse `+Rodungsbewilligung+`
 [cols=2*,options="header"]
@@ -225,6 +225,7 @@ Regel: Es werden nur Objekte der Klasse `+Lage+` transferiert, welche `+ist_Schw
 ifdef::backend-pdf[]
 <<<
 endif::[]
+
 
 
 
